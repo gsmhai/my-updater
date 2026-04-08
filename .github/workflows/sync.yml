@@ -1,0 +1,60 @@
+name: Update Subscription Content
+
+on:
+  schedule:
+    # 每天北京时间 0:00, 6:00, 12:00, 18:00 执行一次 (UTC 时间比北京慢 8 小时)
+    #- cron: '0 4,10,16,22 * * *'
+    - cron: '*/30 * * * *'  
+  workflow_dispatch: # 允许你在 GitHub 页面手动点击运行
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: pip install requests pyyaml
+
+      - name: Run Update Script
+        run: python auto_proxy.py
+
+      - name: Commit and Push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .
+
+          # 检查是否有实际的文件变动，如果没有就直接退出，不执行无意义的提交
+          if git diff-index --quiet HEAD; then
+            echo "没有发现文件变动，跳过本次提交。"
+            exit 0
+          fi
+
+          # 定义我们的自动更新专属签名
+          AUTO_COMMIT_MSG="⚡ Auto update: 节点与历史更新频率已同步"
+
+          # 获取上一次提交的备注信息
+          LAST_COMMIT_MSG=$(git log -1 --pretty=format:"%s")
+
+          # 判断逻辑：对比上一次提交是不是我们的自动更新
+          if [ "$LAST_COMMIT_MSG" = "$AUTO_COMMIT_MSG" ]; then
+            echo "检测到上一次是自动更新，执行追加合并 (amend)..."
+            # --no-edit 表示沿用之前的注释，不需要重新输入
+            git commit --amend --no-edit
+            git push --force
+          else
+            echo "检测到上一次是人工修改: $LAST_COMMIT_MSG"
+            echo "执行新建提交，保护人工修改记录..."
+            git commit -m "$AUTO_COMMIT_MSG"
+            git push
+          fi
