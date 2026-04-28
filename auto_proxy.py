@@ -13,7 +13,7 @@ SOURCES = [
     {"name": "toshare5", "repo_url": "https://raw.githubusercontent.com/toshare5/toshare5.github.io/main/README.md", "clash_keyword": "免费Clash订阅链接", "v2ray_keyword": "免费v2rayN订阅链接"},
     {"name": "mkshare3", "repo_url": "https://raw.githubusercontent.com/mkshare3/mkshare3.github.io/main/README.md", "clash_keyword": "免费Clash订阅链接", "v2ray_keyword": "免费v2rayN订阅链接"},
     {"name": "abshare3", "repo_url": "https://raw.githubusercontent.com/abshare3/abshare3.github.io/main/README.md", "clash_keyword": "免费Clash订阅链接", "v2ray_keyword": "免费v2rayN订阅链接"},
-    {"name": "mksshare", "repo_url": "https://raw.githubusercontent.com/mksshare/mksshare.github.io/main/README.md", "clash_keyword": "免费Clash订阅链接", "v2ray_keyword": "免费v2rayN订阅链接"}
+    # {"name": "mksshare", "repo_url": "https://raw.githubusercontent.com/mksshare/mksshare.github.io/main/README.md", "clash_keyword": "免费Clash订阅链接", "v2ray_keyword": "免费v2rayN订阅链接"}
 ]
 
 HISTORY_FILE = "history.json"
@@ -118,10 +118,12 @@ def main():
             clash_url = fetch_real_url(content, source['clash_keyword'])
             if clash_url:
                 c_resp = requests.get(clash_url, headers=clash_headers, timeout=15)
-                
                 try:
                     yaml_data = yaml.safe_load(c_resp.text)
-                    
+                    if not isinstance(yaml_data, dict):
+                        print(f'[{s_name}] Clash 配置解析失败：{c_resp.text[:80]}')
+                        continue
+
                     if yaml_data and not final_clash_config:
                         for k, v in yaml_data.items():
                             if k not in ['proxies', 'proxy-groups']: final_clash_config[k] = v
