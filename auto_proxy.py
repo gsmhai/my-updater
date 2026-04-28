@@ -13,6 +13,8 @@ SOURCES = [
     {"name": "toshare5", "repo_url": "https://raw.githubusercontent.com/toshare5/toshare5.github.io/main/README.md", "clash_keyword": "免费Clash订阅链接", "v2ray_keyword": "免费v2rayN订阅链接"},
     {"name": "mkshare3", "repo_url": "https://raw.githubusercontent.com/mkshare3/mkshare3.github.io/main/README.md", "clash_keyword": "免费Clash订阅链接", "v2ray_keyword": "免费v2rayN订阅链接"},
     {"name": "abshare3", "repo_url": "https://raw.githubusercontent.com/abshare3/abshare3.github.io/main/README.md", "clash_keyword": "免费Clash订阅链接", "v2ray_keyword": "免费v2rayN订阅链接"},
+    {"name": "abshare", "repo_url": "https://raw.githubusercontent.com/abshare/abshare.github.io/main/README.md", "clash_keyword": "免费Clash订阅链接", "v2ray_keyword": "免费v2rayN订阅链接"},
+
     # {"name": "mksshare", "repo_url": "https://raw.githubusercontent.com/mksshare/mksshare.github.io/main/README.md", "clash_keyword": "免费Clash订阅链接", "v2ray_keyword": "免费v2rayN订阅链接"}
 ]
 
