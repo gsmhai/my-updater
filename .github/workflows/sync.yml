@@ -21,6 +21,10 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          # 必须拉全量历史！默认浅克隆(depth=1)下 git commit --amend
+          # 会生成无父的孤儿提交，force push 后整个仓库历史都会被清空
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v4
