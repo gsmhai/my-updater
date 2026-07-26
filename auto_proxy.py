@@ -406,6 +406,7 @@ def main():
                         {"tag": "local-dns", "address": "https://223.5.5.5/dns-query", "detour": "direct"}
                     ],
                     "rules": [
+                        {"outbound": "any", "server": "local-dns"},
                         {"rule_set": "geosite-cn", "server": "local-dns"}
                     ],
                     "final": "remote-dns"
@@ -455,14 +456,14 @@ def main():
                             "type": "remote",
                             "format": "binary",
                             "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
-                            "download_detour": "direct"
+                            "download_detour": "🚀 节点选择"
                         },
                         {
                             "tag": "geoip-cn",
                             "type": "remote",
                             "format": "binary",
                             "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
-                            "download_detour": "direct"
+                            "download_detour": "🚀 节点选择"
                         }
                     ],
                     "final": "🚀 节点选择",
