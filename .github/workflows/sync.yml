@@ -4,18 +4,23 @@ on:
   schedule:
     # 每天北京时间 0:00, 6:00, 12:00, 18:00 执行一次 (UTC 时间比北京慢 8 小时)
     #- cron: '0 4,10,16,22 * * *'
-    - cron: '*/15 * * * *'  
+    - cron: '*/15 * * * *'
   workflow_dispatch: # 允许你在 GitHub 页面手动点击运行
 
 permissions:
   contents: write
+
+# 防止多个运行同时执行、互相 force-push 覆盖
+concurrency:
+  group: update-subscription
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -43,18 +48,27 @@ jobs:
           # 定义我们的自动更新专属签名
           AUTO_COMMIT_MSG="⚡ Auto update: 节点与历史更新频率已同步"
 
-          # 获取上一次提交的备注信息
+          # 获取上一次提交的备注信息和作者（双重校验，防止误 amend 人工提交）
           LAST_COMMIT_MSG=$(git log -1 --pretty=format:"%s")
+          LAST_AUTHOR_EMAIL=$(git log -1 --pretty=format:"%ae")
 
-          # 判断逻辑：对比上一次提交是不是我们的自动更新
-          if [ "$LAST_COMMIT_MSG" = "$AUTO_COMMIT_MSG" ]; then
+          # 判断逻辑：备注和作者都匹配才认定为我们的自动更新
+          if [ "$LAST_COMMIT_MSG" = "$AUTO_COMMIT_MSG" ] && [ "$LAST_AUTHOR_EMAIL" = "github-actions[bot]@users.noreply.github.com" ]; then
             echo "检测到上一次是自动更新，执行追加合并 (amend)..."
-            # --no-edit 表示沿用之前的注释，不需要重新输入
             git commit --amend --no-edit
-            git push --force
+            # --force-with-lease：如果 checkout 之后远端出现了新提交（比如你的人工 push），
+            # 推送会被拒绝，而不是像 --force 那样直接覆盖掉
+            if ! git push --force-with-lease origin main; then
+              echo "⚠️ 推送被拒：远端在本次运行期间出现了新提交（可能是人工提交）。"
+              echo "本次放弃推送以保护该提交，下一次定时运行会基于最新代码重新生成。"
+              exit 0
+            fi
           else
             echo "检测到上一次是人工修改: $LAST_COMMIT_MSG"
             echo "执行新建提交，保护人工修改记录..."
             git commit -m "$AUTO_COMMIT_MSG"
-            git push
+            if ! git push origin main; then
+              echo "⚠️ 推送被拒：远端有新提交。本次放弃，下一次定时运行会重新生成。"
+              exit 0
+            fi
           fi

@@ -402,14 +402,21 @@ def main():
                 "log": {"level": "warn", "timestamp": True},
                 "dns": {
                     "servers": [
-                        {"tag": "remote-dns", "address": "https://1.1.1.1/dns-query", "detour": "🚀 节点选择"},
-                        {"tag": "local-dns", "address": "https://223.5.5.5/dns-query", "detour": "direct"}
+                        {"tag": "remote-dns", "address": "https://1.1.1.1/dns-query",
+                         "detour": "🚀 节点选择", "strategy": "ipv4_only"},
+                        {"tag": "local-dns", "address": "https://223.5.5.5/dns-query",
+                         "detour": "direct", "strategy": "ipv4_only"}
                     ],
                     "rules": [
+                        # 防回环：代理服务器自身域名必须用本地 DNS 直连解析
                         {"outbound": "any", "server": "local-dns"},
+                        # 非中国大陆域名一律用远端 DNS，避免被污染
+                        {"rule_set": "geosite-geolocation-!cn", "server": "remote-dns"},
                         {"rule_set": "geosite-cn", "server": "local-dns"}
                     ],
-                    "final": "remote-dns"
+                    "final": "remote-dns",
+                    "strategy": "ipv4_only",
+                    "independent_cache": True
                 },
                 "inbounds": [
                     {
@@ -423,7 +430,8 @@ def main():
                         "tag": "tun-in",
                         "address": ["172.19.0.1/30"],
                         "auto_route": True,
-                        "strict_route": True
+                        "strict_route": True,
+                        "stack": "mixed"
                     }
                 ],
                 "outbounds": [
@@ -447,7 +455,11 @@ def main():
                         {"action": "sniff"},
                         {"protocol": "dns", "action": "hijack-dns"},
                         {"ip_is_private": True, "outbound": "direct"},
+                        # 域名类规则优先，命中国外域名直接走代理
+                        {"rule_set": "geosite-geolocation-!cn", "outbound": "🚀 节点选择"},
                         {"rule_set": "geosite-cn", "outbound": "direct"},
+                        # IP 类规则必须先 resolve，否则目标是域名时不会匹配
+                        {"action": "resolve", "strategy": "ipv4_only"},
                         {"rule_set": "geoip-cn", "outbound": "direct"}
                     ],
                     "rule_set": [
@@ -456,6 +468,13 @@ def main():
                             "type": "remote",
                             "format": "binary",
                             "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+                            "download_detour": "🚀 节点选择"
+                        },
+                        {
+                            "tag": "geosite-geolocation-!cn",
+                            "type": "remote",
+                            "format": "binary",
+                            "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
                             "download_detour": "🚀 节点选择"
                         },
                         {
