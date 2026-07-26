@@ -8,21 +8,33 @@
       {
         "tag": "remote-dns",
         "address": "https://1.1.1.1/dns-query",
-        "detour": "🚀 节点选择"
+        "detour": "🚀 节点选择",
+        "strategy": "ipv4_only"
       },
       {
         "tag": "local-dns",
         "address": "https://223.5.5.5/dns-query",
-        "detour": "direct"
+        "detour": "direct",
+        "strategy": "ipv4_only"
       }
     ],
     "rules": [
+      {
+        "outbound": "any",
+        "server": "local-dns"
+      },
+      {
+        "rule_set": "geosite-geolocation-!cn",
+        "server": "remote-dns"
+      },
       {
         "rule_set": "geosite-cn",
         "server": "local-dns"
       }
     ],
-    "final": "remote-dns"
+    "final": "remote-dns",
+    "strategy": "ipv4_only",
+    "independent_cache": true
   },
   "inbounds": [
     {
@@ -38,7 +50,8 @@
         "172.19.0.1/30"
       ],
       "auto_route": true,
-      "strict_route": true
+      "strict_route": true,
+      "stack": "mixed"
     }
   ],
   "outbounds": [
@@ -47,14 +60,30 @@
       "tag": "🚀 节点选择",
       "outbounds": [
         "♻️ 自动选择",
-        "mkshare3     534.67 MB 更新：26-07-26 13:38  上次：07-07 03:04  [5.2h]"
+        "toshare5     1.11 GB  更新：26-07-26 15:19  上次：07-10 20:53  [4.9h]",
+        "mkshare3     2.89 GB  更新：26-07-26 16:28  上次：07-07 03:04  [5.2h]",
+        "abshare3     647.67 MB 更新：26-07-26 16:46  上次：07-10 22:27  [4.0h]",
+        "tolinkshare2 5 GB     更新：26-07-26 17:09  上次：07-10 22:17  [3.7h]"
       ]
     },
     {
       "type": "urltest",
       "tag": "♻️ 自动选择",
       "outbounds": [
-        "[mkshare3] 534.67 MB 时间:26-07-26 13:38",
+        "[toshare5] 1.11 GB 时间:26-07-26 15:19",
+        "[toshare5] 🇭🇰香港 101 | 1x HK",
+        "[toshare5] 🇭🇰香港 102 | 1x HK",
+        "[toshare5] 🇭🇰香港 103 | 家宽 | 1x HK",
+        "[toshare5] 🇹🇼台湾 101 | 1x TW",
+        "[toshare5] 🇹🇼台湾 102 | 1x TW",
+        "[toshare5] 🇯🇵日本 101 | 1x JP",
+        "[toshare5] 🇯🇵日本 103 | 1x JP",
+        "[toshare5] 🇸🇬新加坡 101 | 1x SG",
+        "[toshare5] 🇸🇬新加坡 102 | 1x SG",
+        "[toshare5] 🇸🇬新加坡 103 | 1x SG",
+        "[toshare5] 🇺🇸美国 101 ChatGPT专用 | 1x US",
+        "[toshare5] 🇺🇸美国 103 ChatGPT专用 | 1x US",
+        "[mkshare3] 2.89 GB 时间:26-07-26 16:28",
         "[mkshare3] 🇭🇰香港 101 | 1x HK",
         "[mkshare3] 🇭🇰香港 102 | 1x HK",
         "[mkshare3] 🇭🇰香港 103 | 家宽 | 1x HK",
@@ -66,16 +95,61 @@
         "[mkshare3] 🇸🇬新加坡 102 | 1x SG",
         "[mkshare3] 🇸🇬新加坡 103 | 1x SG",
         "[mkshare3] 🇺🇸美国 101 ChatGPT专用 | 1x US",
-        "[mkshare3] 🇺🇸美国 103 ChatGPT专用 | 1x US"
+        "[mkshare3] 🇺🇸美国 103 ChatGPT专用 | 1x US",
+        "[abshare3] 647.67 MB 时间:26-07-26 16:46",
+        "[abshare3] 🇭🇰香港 101 | 1x HK",
+        "[abshare3] 🇭🇰香港 102 | 1x HK",
+        "[abshare3] 🇭🇰香港 103 | 家宽 | 1x HK",
+        "[abshare3] 🇹🇼台湾 101 | 1x TW",
+        "[abshare3] 🇹🇼台湾 102 | 1x TW",
+        "[abshare3] 🇯🇵日本 101 | 1x JP",
+        "[abshare3] 🇯🇵日本 103 | 1x JP",
+        "[abshare3] 🇸🇬新加坡 101 | 1x SG",
+        "[abshare3] 🇸🇬新加坡 102 | 1x SG",
+        "[abshare3] 🇸🇬新加坡 103 | 1x SG",
+        "[abshare3] 🇺🇸美国 101 ChatGPT专用 | 1x US",
+        "[abshare3] 🇺🇸美国 103 ChatGPT专用 | 1x US",
+        "[tolinkshare2] 5 GB 时间:26-07-26 17:09",
+        "[tolinkshare2] 🇭🇰香港 101 | 1x HK",
+        "[tolinkshare2] 🇭🇰香港 102 | 1x HK",
+        "[tolinkshare2] 🇭🇰香港 103 | 家宽 | 1x HK",
+        "[tolinkshare2] 🇹🇼台湾 101 | 1x TW",
+        "[tolinkshare2] 🇹🇼台湾 102 | 1x TW",
+        "[tolinkshare2] 🇯🇵日本 101 | 1x JP",
+        "[tolinkshare2] 🇯🇵日本 103 | 1x JP",
+        "[tolinkshare2] 🇸🇬新加坡 101 | 1x SG",
+        "[tolinkshare2] 🇸🇬新加坡 102 | 1x SG",
+        "[tolinkshare2] 🇸🇬新加坡 103 | 1x SG",
+        "[tolinkshare2] 🇺🇸美国 101 ChatGPT专用 | 1x US",
+        "[tolinkshare2] 🇺🇸美国 103 ChatGPT专用 | 1x US"
       ],
       "url": "https://www.gstatic.com/generate_204",
       "interval": "5m"
     },
     {
       "type": "selector",
-      "tag": "mkshare3     534.67 MB 更新：26-07-26 13:38  上次：07-07 03:04  [5.2h]",
+      "tag": "toshare5     1.11 GB  更新：26-07-26 15:19  上次：07-10 20:53  [4.9h]",
       "outbounds": [
-        "[mkshare3] 534.67 MB 时间:26-07-26 13:38",
+        "[toshare5] 1.11 GB 时间:26-07-26 15:19",
+        "[toshare5] 🇭🇰香港 101 | 1x HK",
+        "[toshare5] 🇭🇰香港 102 | 1x HK",
+        "[toshare5] 🇭🇰香港 103 | 家宽 | 1x HK",
+        "[toshare5] 🇹🇼台湾 101 | 1x TW",
+        "[toshare5] 🇹🇼台湾 102 | 1x TW",
+        "[toshare5] 🇯🇵日本 101 | 1x JP",
+        "[toshare5] 🇯🇵日本 103 | 1x JP",
+        "[toshare5] 🇸🇬新加坡 101 | 1x SG",
+        "[toshare5] 🇸🇬新加坡 102 | 1x SG",
+        "[toshare5] 🇸🇬新加坡 103 | 1x SG",
+        "[toshare5] 🇺🇸美国 101 ChatGPT专用 | 1x US",
+        "[toshare5] 🇺🇸美国 103 ChatGPT专用 | 1x US"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "mkshare3     2.89 GB  更新：26-07-26 16:28  上次：07-07 03:04  [5.2h]",
+      "outbounds": [
+        "[mkshare3] 2.89 GB 时间:26-07-26 16:28",
         "[mkshare3] 🇭🇰香港 101 | 1x HK",
         "[mkshare3] 🇭🇰香港 102 | 1x HK",
         "[mkshare3] 🇭🇰香港 103 | 家宽 | 1x HK",
@@ -91,11 +165,322 @@
       ]
     },
     {
+      "type": "selector",
+      "tag": "abshare3     647.67 MB 更新：26-07-26 16:46  上次：07-10 22:27  [4.0h]",
+      "outbounds": [
+        "[abshare3] 647.67 MB 时间:26-07-26 16:46",
+        "[abshare3] 🇭🇰香港 101 | 1x HK",
+        "[abshare3] 🇭🇰香港 102 | 1x HK",
+        "[abshare3] 🇭🇰香港 103 | 家宽 | 1x HK",
+        "[abshare3] 🇹🇼台湾 101 | 1x TW",
+        "[abshare3] 🇹🇼台湾 102 | 1x TW",
+        "[abshare3] 🇯🇵日本 101 | 1x JP",
+        "[abshare3] 🇯🇵日本 103 | 1x JP",
+        "[abshare3] 🇸🇬新加坡 101 | 1x SG",
+        "[abshare3] 🇸🇬新加坡 102 | 1x SG",
+        "[abshare3] 🇸🇬新加坡 103 | 1x SG",
+        "[abshare3] 🇺🇸美国 101 ChatGPT专用 | 1x US",
+        "[abshare3] 🇺🇸美国 103 ChatGPT专用 | 1x US"
+      ]
+    },
+    {
+      "type": "selector",
+      "tag": "tolinkshare2 5 GB     更新：26-07-26 17:09  上次：07-10 22:17  [3.7h]",
+      "outbounds": [
+        "[tolinkshare2] 5 GB 时间:26-07-26 17:09",
+        "[tolinkshare2] 🇭🇰香港 101 | 1x HK",
+        "[tolinkshare2] 🇭🇰香港 102 | 1x HK",
+        "[tolinkshare2] 🇭🇰香港 103 | 家宽 | 1x HK",
+        "[tolinkshare2] 🇹🇼台湾 101 | 1x TW",
+        "[tolinkshare2] 🇹🇼台湾 102 | 1x TW",
+        "[tolinkshare2] 🇯🇵日本 101 | 1x JP",
+        "[tolinkshare2] 🇯🇵日本 103 | 1x JP",
+        "[tolinkshare2] 🇸🇬新加坡 101 | 1x SG",
+        "[tolinkshare2] 🇸🇬新加坡 102 | 1x SG",
+        "[tolinkshare2] 🇸🇬新加坡 103 | 1x SG",
+        "[tolinkshare2] 🇺🇸美国 101 ChatGPT专用 | 1x US",
+        "[tolinkshare2] 🇺🇸美国 103 ChatGPT专用 | 1x US"
+      ]
+    },
+    {
       "type": "vless",
-      "tag": "[mkshare3] 534.67 MB 时间:26-07-26 13:38",
+      "tag": "[toshare5] 1.11 GB 时间:26-07-26 15:19",
       "server": "freea.glyphara.com",
       "server_port": 30101,
-      "uuid": "2b49da09-203d-414b-b3a2-9479899003a3",
+      "uuid": "51488361-6cc0-4c20-a0d2-0185fbe36124",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "itunes.apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "egnl0iFXY3IZYfvHwoNd72sCaULkoFRoL78wQiFwcDU",
+          "short_id": "176d4445"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[toshare5] 🇭🇰香港 101 | 1x HK",
+      "server": "freea.glyphara.com",
+      "server_port": 30101,
+      "uuid": "51488361-6cc0-4c20-a0d2-0185fbe36124",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "itunes.apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "egnl0iFXY3IZYfvHwoNd72sCaULkoFRoL78wQiFwcDU",
+          "short_id": "176d4445"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[toshare5] 🇭🇰香港 102 | 1x HK",
+      "server": "freea.glyphara.com",
+      "server_port": 30102,
+      "uuid": "51488361-6cc0-4c20-a0d2-0185fbe36124",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.amd.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "W4NAOZLWDoh0h_firJoGZkvCIThYtXfAhnOPiW1OCRQ",
+          "short_id": "11685da6"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[toshare5] 🇭🇰香港 103 | 家宽 | 1x HK",
+      "server": "freea.glyphara.com",
+      "server_port": 30103,
+      "uuid": "51488361-6cc0-4c20-a0d2-0185fbe36124",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "learn.microsoft.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "8M0-R5F627Hnwb-hiS0VMSm-q3NPmriztJSU9FfvTB4",
+          "short_id": "435e2af5"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[toshare5] 🇹🇼台湾 101 | 1x TW",
+      "server": "freea.glyphara.com",
+      "server_port": 30201,
+      "uuid": "51488361-6cc0-4c20-a0d2-0185fbe36124",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "lol.secure.dyn.riotcdn.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "kb5IP7-mBUXwW7zszu-grmOgNEWmqDiCvf1NRfbF3AQ",
+          "short_id": "c1e12817"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[toshare5] 🇹🇼台湾 102 | 1x TW",
+      "server": "freea.glyphara.com",
+      "server_port": 30202,
+      "uuid": "51488361-6cc0-4c20-a0d2-0185fbe36124",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.samsung.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "9ahErgB4NKffqiZe3HHRx7Wb5br086fhnI75YuCdN0U",
+          "short_id": "10fa499e"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[toshare5] 🇯🇵日本 101 | 1x JP",
+      "server": "freea.glyphara.com",
+      "server_port": 30301,
+      "uuid": "51488361-6cc0-4c20-a0d2-0185fbe36124",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "lol.secure.dyn.riotcdn.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "IoW1RqD-BzW9oxaM4KtHx5ap6haIENhYyZt_oMZqlCM",
+          "short_id": "950cee8a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[toshare5] 🇯🇵日本 103 | 1x JP",
+      "server": "freea.glyphara.com",
+      "server_port": 30303,
+      "uuid": "51488361-6cc0-4c20-a0d2-0185fbe36124",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "mensura.cdn-apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "RuNAMARjcI4VNAkqWazbFm4sa3Kc-uViiruuByx2TiM",
+          "short_id": "4d77021d"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[toshare5] 🇸🇬新加坡 101 | 1x SG",
+      "server": "freea.glyphara.com",
+      "server_port": 30401,
+      "uuid": "51488361-6cc0-4c20-a0d2-0185fbe36124",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "learn.microsoft.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "ZeXA8rcM3TV466jK83J157gY7U2JTI9KP9nmn_Nbawk",
+          "short_id": "105a652c"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[toshare5] 🇸🇬新加坡 102 | 1x SG",
+      "server": "freea.glyphara.com",
+      "server_port": 30402,
+      "uuid": "51488361-6cc0-4c20-a0d2-0185fbe36124",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "itunes.apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "uTOYAGREMpfEr3cQFcLwgMAWwwxjS3e2Yw32kCdN3Ew",
+          "short_id": "f5f6e6f4"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[toshare5] 🇸🇬新加坡 103 | 1x SG",
+      "server": "freea.glyphara.com",
+      "server_port": 30403,
+      "uuid": "51488361-6cc0-4c20-a0d2-0185fbe36124",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.samsung.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "avy1Z524LLGhXuHyCYV_k_hqi_fnHPCNSdNE85Z4qDo",
+          "short_id": "1b3f5a2e"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[toshare5] 🇺🇸美国 101 ChatGPT专用 | 1x US",
+      "server": "freea.glyphara.com",
+      "server_port": 30701,
+      "uuid": "51488361-6cc0-4c20-a0d2-0185fbe36124",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.amd.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "cgGav3P_PeaM4grdSECGj4Tt9IsCmSqhGo_EJ0_KdWY",
+          "short_id": "e62db878"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[toshare5] 🇺🇸美国 103 ChatGPT专用 | 1x US",
+      "server": "freea.glyphara.com",
+      "server_port": 30703,
+      "uuid": "51488361-6cc0-4c20-a0d2-0185fbe36124",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "mensura.cdn-apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "Fpcp8ed_KjL5rnn0gstMa0AQPL8GcYMtArb--r1AhnI",
+          "short_id": "845532fa"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[mkshare3] 2.89 GB 时间:26-07-26 16:28",
+      "server": "freea.glyphara.com",
+      "server_port": 30101,
+      "uuid": "bbb076f6-f8a5-4b3c-8244-12f43fd1701f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -116,7 +501,7 @@
       "tag": "[mkshare3] 🇭🇰香港 101 | 1x HK",
       "server": "freea.glyphara.com",
       "server_port": 30101,
-      "uuid": "2b49da09-203d-414b-b3a2-9479899003a3",
+      "uuid": "bbb076f6-f8a5-4b3c-8244-12f43fd1701f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -137,7 +522,7 @@
       "tag": "[mkshare3] 🇭🇰香港 102 | 1x HK",
       "server": "freea.glyphara.com",
       "server_port": 30102,
-      "uuid": "2b49da09-203d-414b-b3a2-9479899003a3",
+      "uuid": "bbb076f6-f8a5-4b3c-8244-12f43fd1701f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -158,7 +543,7 @@
       "tag": "[mkshare3] 🇭🇰香港 103 | 家宽 | 1x HK",
       "server": "freea.glyphara.com",
       "server_port": 30103,
-      "uuid": "2b49da09-203d-414b-b3a2-9479899003a3",
+      "uuid": "bbb076f6-f8a5-4b3c-8244-12f43fd1701f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -179,7 +564,7 @@
       "tag": "[mkshare3] 🇹🇼台湾 101 | 1x TW",
       "server": "freea.glyphara.com",
       "server_port": 30201,
-      "uuid": "2b49da09-203d-414b-b3a2-9479899003a3",
+      "uuid": "bbb076f6-f8a5-4b3c-8244-12f43fd1701f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -200,7 +585,7 @@
       "tag": "[mkshare3] 🇹🇼台湾 102 | 1x TW",
       "server": "freea.glyphara.com",
       "server_port": 30202,
-      "uuid": "2b49da09-203d-414b-b3a2-9479899003a3",
+      "uuid": "bbb076f6-f8a5-4b3c-8244-12f43fd1701f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -221,7 +606,7 @@
       "tag": "[mkshare3] 🇯🇵日本 101 | 1x JP",
       "server": "freea.glyphara.com",
       "server_port": 30301,
-      "uuid": "2b49da09-203d-414b-b3a2-9479899003a3",
+      "uuid": "bbb076f6-f8a5-4b3c-8244-12f43fd1701f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -242,7 +627,7 @@
       "tag": "[mkshare3] 🇯🇵日本 103 | 1x JP",
       "server": "freea.glyphara.com",
       "server_port": 30303,
-      "uuid": "2b49da09-203d-414b-b3a2-9479899003a3",
+      "uuid": "bbb076f6-f8a5-4b3c-8244-12f43fd1701f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -263,7 +648,7 @@
       "tag": "[mkshare3] 🇸🇬新加坡 101 | 1x SG",
       "server": "freea.glyphara.com",
       "server_port": 30401,
-      "uuid": "2b49da09-203d-414b-b3a2-9479899003a3",
+      "uuid": "bbb076f6-f8a5-4b3c-8244-12f43fd1701f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -284,7 +669,7 @@
       "tag": "[mkshare3] 🇸🇬新加坡 102 | 1x SG",
       "server": "freea.glyphara.com",
       "server_port": 30402,
-      "uuid": "2b49da09-203d-414b-b3a2-9479899003a3",
+      "uuid": "bbb076f6-f8a5-4b3c-8244-12f43fd1701f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -305,7 +690,7 @@
       "tag": "[mkshare3] 🇸🇬新加坡 103 | 1x SG",
       "server": "freea.glyphara.com",
       "server_port": 30403,
-      "uuid": "2b49da09-203d-414b-b3a2-9479899003a3",
+      "uuid": "bbb076f6-f8a5-4b3c-8244-12f43fd1701f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -326,7 +711,7 @@
       "tag": "[mkshare3] 🇺🇸美国 101 ChatGPT专用 | 1x US",
       "server": "freea.glyphara.com",
       "server_port": 30701,
-      "uuid": "2b49da09-203d-414b-b3a2-9479899003a3",
+      "uuid": "bbb076f6-f8a5-4b3c-8244-12f43fd1701f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -347,7 +732,553 @@
       "tag": "[mkshare3] 🇺🇸美国 103 ChatGPT专用 | 1x US",
       "server": "freea.glyphara.com",
       "server_port": 30703,
-      "uuid": "2b49da09-203d-414b-b3a2-9479899003a3",
+      "uuid": "bbb076f6-f8a5-4b3c-8244-12f43fd1701f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "mensura.cdn-apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "Fpcp8ed_KjL5rnn0gstMa0AQPL8GcYMtArb--r1AhnI",
+          "short_id": "845532fa"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[abshare3] 647.67 MB 时间:26-07-26 16:46",
+      "server": "freea.glyphara.com",
+      "server_port": 30101,
+      "uuid": "1b446fb4-809f-4a70-b7b4-38ae9c467d40",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "itunes.apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "egnl0iFXY3IZYfvHwoNd72sCaULkoFRoL78wQiFwcDU",
+          "short_id": "176d4445"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[abshare3] 🇭🇰香港 101 | 1x HK",
+      "server": "freea.glyphara.com",
+      "server_port": 30101,
+      "uuid": "1b446fb4-809f-4a70-b7b4-38ae9c467d40",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "itunes.apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "egnl0iFXY3IZYfvHwoNd72sCaULkoFRoL78wQiFwcDU",
+          "short_id": "176d4445"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[abshare3] 🇭🇰香港 102 | 1x HK",
+      "server": "freea.glyphara.com",
+      "server_port": 30102,
+      "uuid": "1b446fb4-809f-4a70-b7b4-38ae9c467d40",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.amd.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "W4NAOZLWDoh0h_firJoGZkvCIThYtXfAhnOPiW1OCRQ",
+          "short_id": "11685da6"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[abshare3] 🇭🇰香港 103 | 家宽 | 1x HK",
+      "server": "freea.glyphara.com",
+      "server_port": 30103,
+      "uuid": "1b446fb4-809f-4a70-b7b4-38ae9c467d40",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "learn.microsoft.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "8M0-R5F627Hnwb-hiS0VMSm-q3NPmriztJSU9FfvTB4",
+          "short_id": "435e2af5"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[abshare3] 🇹🇼台湾 101 | 1x TW",
+      "server": "freea.glyphara.com",
+      "server_port": 30201,
+      "uuid": "1b446fb4-809f-4a70-b7b4-38ae9c467d40",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "lol.secure.dyn.riotcdn.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "kb5IP7-mBUXwW7zszu-grmOgNEWmqDiCvf1NRfbF3AQ",
+          "short_id": "c1e12817"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[abshare3] 🇹🇼台湾 102 | 1x TW",
+      "server": "freea.glyphara.com",
+      "server_port": 30202,
+      "uuid": "1b446fb4-809f-4a70-b7b4-38ae9c467d40",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.samsung.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "9ahErgB4NKffqiZe3HHRx7Wb5br086fhnI75YuCdN0U",
+          "short_id": "10fa499e"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[abshare3] 🇯🇵日本 101 | 1x JP",
+      "server": "freea.glyphara.com",
+      "server_port": 30301,
+      "uuid": "1b446fb4-809f-4a70-b7b4-38ae9c467d40",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "lol.secure.dyn.riotcdn.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "IoW1RqD-BzW9oxaM4KtHx5ap6haIENhYyZt_oMZqlCM",
+          "short_id": "950cee8a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[abshare3] 🇯🇵日本 103 | 1x JP",
+      "server": "freea.glyphara.com",
+      "server_port": 30303,
+      "uuid": "1b446fb4-809f-4a70-b7b4-38ae9c467d40",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "mensura.cdn-apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "RuNAMARjcI4VNAkqWazbFm4sa3Kc-uViiruuByx2TiM",
+          "short_id": "4d77021d"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[abshare3] 🇸🇬新加坡 101 | 1x SG",
+      "server": "freea.glyphara.com",
+      "server_port": 30401,
+      "uuid": "1b446fb4-809f-4a70-b7b4-38ae9c467d40",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "learn.microsoft.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "ZeXA8rcM3TV466jK83J157gY7U2JTI9KP9nmn_Nbawk",
+          "short_id": "105a652c"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[abshare3] 🇸🇬新加坡 102 | 1x SG",
+      "server": "freea.glyphara.com",
+      "server_port": 30402,
+      "uuid": "1b446fb4-809f-4a70-b7b4-38ae9c467d40",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "itunes.apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "uTOYAGREMpfEr3cQFcLwgMAWwwxjS3e2Yw32kCdN3Ew",
+          "short_id": "f5f6e6f4"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[abshare3] 🇸🇬新加坡 103 | 1x SG",
+      "server": "freea.glyphara.com",
+      "server_port": 30403,
+      "uuid": "1b446fb4-809f-4a70-b7b4-38ae9c467d40",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.samsung.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "avy1Z524LLGhXuHyCYV_k_hqi_fnHPCNSdNE85Z4qDo",
+          "short_id": "1b3f5a2e"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[abshare3] 🇺🇸美国 101 ChatGPT专用 | 1x US",
+      "server": "freea.glyphara.com",
+      "server_port": 30701,
+      "uuid": "1b446fb4-809f-4a70-b7b4-38ae9c467d40",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.amd.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "cgGav3P_PeaM4grdSECGj4Tt9IsCmSqhGo_EJ0_KdWY",
+          "short_id": "e62db878"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[abshare3] 🇺🇸美国 103 ChatGPT专用 | 1x US",
+      "server": "freea.glyphara.com",
+      "server_port": 30703,
+      "uuid": "1b446fb4-809f-4a70-b7b4-38ae9c467d40",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "mensura.cdn-apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "Fpcp8ed_KjL5rnn0gstMa0AQPL8GcYMtArb--r1AhnI",
+          "short_id": "845532fa"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[tolinkshare2] 5 GB 时间:26-07-26 17:09",
+      "server": "freea.glyphara.com",
+      "server_port": 30101,
+      "uuid": "5579e6a7-da99-42e9-b3dd-6fd83c3e175b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "itunes.apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "egnl0iFXY3IZYfvHwoNd72sCaULkoFRoL78wQiFwcDU",
+          "short_id": "176d4445"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[tolinkshare2] 🇭🇰香港 101 | 1x HK",
+      "server": "freea.glyphara.com",
+      "server_port": 30101,
+      "uuid": "5579e6a7-da99-42e9-b3dd-6fd83c3e175b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "itunes.apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "egnl0iFXY3IZYfvHwoNd72sCaULkoFRoL78wQiFwcDU",
+          "short_id": "176d4445"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[tolinkshare2] 🇭🇰香港 102 | 1x HK",
+      "server": "freea.glyphara.com",
+      "server_port": 30102,
+      "uuid": "5579e6a7-da99-42e9-b3dd-6fd83c3e175b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.amd.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "W4NAOZLWDoh0h_firJoGZkvCIThYtXfAhnOPiW1OCRQ",
+          "short_id": "11685da6"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[tolinkshare2] 🇭🇰香港 103 | 家宽 | 1x HK",
+      "server": "freea.glyphara.com",
+      "server_port": 30103,
+      "uuid": "5579e6a7-da99-42e9-b3dd-6fd83c3e175b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "learn.microsoft.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "8M0-R5F627Hnwb-hiS0VMSm-q3NPmriztJSU9FfvTB4",
+          "short_id": "435e2af5"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[tolinkshare2] 🇹🇼台湾 101 | 1x TW",
+      "server": "freea.glyphara.com",
+      "server_port": 30201,
+      "uuid": "5579e6a7-da99-42e9-b3dd-6fd83c3e175b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "lol.secure.dyn.riotcdn.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "kb5IP7-mBUXwW7zszu-grmOgNEWmqDiCvf1NRfbF3AQ",
+          "short_id": "c1e12817"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[tolinkshare2] 🇹🇼台湾 102 | 1x TW",
+      "server": "freea.glyphara.com",
+      "server_port": 30202,
+      "uuid": "5579e6a7-da99-42e9-b3dd-6fd83c3e175b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.samsung.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "9ahErgB4NKffqiZe3HHRx7Wb5br086fhnI75YuCdN0U",
+          "short_id": "10fa499e"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[tolinkshare2] 🇯🇵日本 101 | 1x JP",
+      "server": "freea.glyphara.com",
+      "server_port": 30301,
+      "uuid": "5579e6a7-da99-42e9-b3dd-6fd83c3e175b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "lol.secure.dyn.riotcdn.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "IoW1RqD-BzW9oxaM4KtHx5ap6haIENhYyZt_oMZqlCM",
+          "short_id": "950cee8a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[tolinkshare2] 🇯🇵日本 103 | 1x JP",
+      "server": "freea.glyphara.com",
+      "server_port": 30303,
+      "uuid": "5579e6a7-da99-42e9-b3dd-6fd83c3e175b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "mensura.cdn-apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "RuNAMARjcI4VNAkqWazbFm4sa3Kc-uViiruuByx2TiM",
+          "short_id": "4d77021d"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[tolinkshare2] 🇸🇬新加坡 101 | 1x SG",
+      "server": "freea.glyphara.com",
+      "server_port": 30401,
+      "uuid": "5579e6a7-da99-42e9-b3dd-6fd83c3e175b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "learn.microsoft.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "ZeXA8rcM3TV466jK83J157gY7U2JTI9KP9nmn_Nbawk",
+          "short_id": "105a652c"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[tolinkshare2] 🇸🇬新加坡 102 | 1x SG",
+      "server": "freea.glyphara.com",
+      "server_port": 30402,
+      "uuid": "5579e6a7-da99-42e9-b3dd-6fd83c3e175b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "itunes.apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "uTOYAGREMpfEr3cQFcLwgMAWwwxjS3e2Yw32kCdN3Ew",
+          "short_id": "f5f6e6f4"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[tolinkshare2] 🇸🇬新加坡 103 | 1x SG",
+      "server": "freea.glyphara.com",
+      "server_port": 30403,
+      "uuid": "5579e6a7-da99-42e9-b3dd-6fd83c3e175b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.samsung.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "avy1Z524LLGhXuHyCYV_k_hqi_fnHPCNSdNE85Z4qDo",
+          "short_id": "1b3f5a2e"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[tolinkshare2] 🇺🇸美国 101 ChatGPT专用 | 1x US",
+      "server": "freea.glyphara.com",
+      "server_port": 30701,
+      "uuid": "5579e6a7-da99-42e9-b3dd-6fd83c3e175b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.amd.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "cgGav3P_PeaM4grdSECGj4Tt9IsCmSqhGo_EJ0_KdWY",
+          "short_id": "e62db878"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "[tolinkshare2] 🇺🇸美国 103 ChatGPT专用 | 1x US",
+      "server": "freea.glyphara.com",
+      "server_port": 30703,
+      "uuid": "5579e6a7-da99-42e9-b3dd-6fd83c3e175b",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -382,8 +1313,16 @@
         "outbound": "direct"
       },
       {
+        "rule_set": "geosite-geolocation-!cn",
+        "outbound": "🚀 节点选择"
+      },
+      {
         "rule_set": "geosite-cn",
         "outbound": "direct"
+      },
+      {
+        "action": "resolve",
+        "strategy": "ipv4_only"
       },
       {
         "rule_set": "geoip-cn",
@@ -396,14 +1335,21 @@
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
-        "download_detour": "direct"
+        "download_detour": "🚀 节点选择"
+      },
+      {
+        "tag": "geosite-geolocation-!cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
+        "download_detour": "🚀 节点选择"
       },
       {
         "tag": "geoip-cn",
         "type": "remote",
         "format": "binary",
         "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
-        "download_detour": "direct"
+        "download_detour": "🚀 节点选择"
       }
     ],
     "final": "🚀 节点选择",
