@@ -5,7 +5,12 @@ import base64
 import json
 import urllib.parse
 import os
+import sys
 from datetime import datetime
+
+# Windows GBK 控制台下打印 emoji 会报 UnicodeEncodeError，强制 UTF-8 输出
+if sys.stdout.encoding and sys.stdout.encoding.lower() != 'utf-8':
+    sys.stdout.reconfigure(encoding='utf-8')
 
 # ================= 配置区域 =================
 SOURCES = [
@@ -22,6 +27,7 @@ HISTORY_FILE = "history.json"
 MAX_HISTORY = 1000
 OUTPUT_CLASH = "clash_sub.txt"
 OUTPUT_V2RAY = "v2ray_sub.txt"
+OUTPUT_SINGBOX = "singbox.json"
 # ============================================
 
 yaml.SafeDumper.ignore_aliases = lambda *args: True
@@ -69,6 +75,111 @@ def decode_base64(text):
         return base64.b64decode(text).decode('utf-8')
     except Exception:
         return text
+
+def build_singbox_transport(node):
+    """从 Clash 节点提取 sing-box 的 transport 配置 (ws/grpc/h2)"""
+    net = node.get('network')
+    if net == 'ws':
+        ws_opts = node.get('ws-opts') or {}
+        transport = {"type": "ws", "path": ws_opts.get('path', '/')}
+        headers = ws_opts.get('headers') or {}
+        if headers:
+            transport['headers'] = headers
+        return transport
+    elif net == 'grpc':
+        grpc_opts = node.get('grpc-opts') or {}
+        return {"type": "grpc", "service_name": grpc_opts.get('grpc-service-name', '')}
+    elif net == 'h2':
+        h2_opts = node.get('h2-opts') or {}
+        return {"type": "http", "host": h2_opts.get('host', []), "path": h2_opts.get('path', '/')}
+    return None
+
+def convert_clash_to_singbox(node):
+    """将单个 Clash 节点转换为 sing-box outbound，不支持的类型返回 None"""
+    try:
+        n_type = node.get('type')
+        base = {
+            "tag": str(node.get('name', '')),
+            "server": str(node.get('server', '')),
+            "server_port": int(node.get('port', 0)),
+        }
+
+        # 通用 TLS 配置
+        tls = None
+        if node.get('tls') or n_type in ('trojan', 'hysteria2', 'hy2', 'tuic'):
+            tls = {"enabled": True}
+            sni = node.get('servername') or node.get('sni')
+            if sni:
+                tls['server_name'] = str(sni)
+            if node.get('skip-cert-verify'):
+                tls['insecure'] = True
+            reality_opts = node.get('reality-opts')
+            if reality_opts:
+                tls['reality'] = {
+                    "enabled": True,
+                    "public_key": reality_opts.get('public-key', ''),
+                    "short_id": reality_opts.get('short-id', ''),
+                }
+                tls['utls'] = {"enabled": True, "fingerprint": node.get('client-fingerprint', 'chrome')}
+
+        if n_type == 'ss':
+            out = {"type": "shadowsocks", **base,
+                   "method": node.get('cipher', ''), "password": str(node.get('password', ''))}
+            if node.get('plugin') == 'obfs':
+                plugin_opts = node.get('plugin-opts') or {}
+                out['plugin'] = 'obfs-local'
+                out['plugin_opts'] = f"obfs={plugin_opts.get('mode', 'http')};obfs-host={plugin_opts.get('host', '')}"
+            return out
+
+        elif n_type == 'vmess':
+            out = {"type": "vmess", **base,
+                   "uuid": str(node.get('uuid', '')),
+                   "alter_id": int(node.get('alterId', 0)),
+                   "security": node.get('cipher', 'auto')}
+            if tls: out['tls'] = tls
+            transport = build_singbox_transport(node)
+            if transport: out['transport'] = transport
+            return out
+
+        elif n_type == 'vless':
+            out = {"type": "vless", **base, "uuid": str(node.get('uuid', ''))}
+            if node.get('flow'):
+                out['flow'] = node['flow']
+            if tls: out['tls'] = tls
+            transport = build_singbox_transport(node)
+            if transport: out['transport'] = transport
+            return out
+
+        elif n_type == 'trojan':
+            out = {"type": "trojan", **base, "password": str(node.get('password', ''))}
+            out['tls'] = tls or {"enabled": True}
+            transport = build_singbox_transport(node)
+            if transport: out['transport'] = transport
+            return out
+
+        elif n_type in ('hysteria2', 'hy2'):
+            out = {"type": "hysteria2", **base, "password": str(node.get('password', ''))}
+            out['tls'] = tls or {"enabled": True}
+            if node.get('obfs'):
+                out['obfs'] = {"type": node.get('obfs'), "password": str(node.get('obfs-password', ''))}
+            return out
+
+        elif n_type == 'tuic':
+            out = {"type": "tuic", **base,
+                   "uuid": str(node.get('uuid', '')),
+                   "password": str(node.get('password', ''))}
+            if node.get('congestion-controller'):
+                out['congestion_control'] = node['congestion-controller']
+            if node.get('udp-relay-mode'):
+                out['udp_relay_mode'] = node['udp-relay-mode']
+            out['tls'] = tls or {"enabled": True}
+            if node.get('alpn'):
+                out['tls']['alpn'] = node['alpn']
+            return out
+
+    except Exception:
+        return None
+    return None
 
 def main():
     history = load_history()
@@ -144,12 +255,12 @@ def main():
                         
                         # 构建超级组名
                         p_traffic = f"{group_traffic:<8}" if group_traffic else "N/A     "
-                        source_data["group_name"] = f"{s_name:<12} 剩余：{p_traffic} 更新：{curr_update_short}  上次：{prev_update_show}  [{avg_h}h]"
+                        source_data["group_name"] = f"{s_name:<12} {p_traffic} 更新：{curr_update_short}  上次：{prev_update_show}  [{avg_h}h]"
 
                         for node in nodes:
                             original_name = str(node.get('name', ''))
                             if "剩余流量" in original_name and group_traffic and curr_update_short != "N/A":
-                                new_node_name = f"[{s_name}] 剩余：{group_traffic} 时间:{curr_update_short}"
+                                new_node_name = f"[{s_name}] {group_traffic} 时间:{curr_update_short}"
                             else:
                                 new_node_name = f"[{s_name}] {original_name}"
                                 
@@ -261,6 +372,108 @@ def main():
         with open(OUTPUT_V2RAY, 'w', encoding='utf-8') as f:
             f.write(final_v2ray_b64)
         print(f"🎉 V2ray 写入完成：已重新编码为 Base64。")
+
+    # 生成 Sing-box 文件
+    if all_clash_proxies:
+        singbox_outbounds = []
+        singbox_source_groups = []
+        skipped = 0
+
+        for src in processed_sources:
+            if not src["clash_nodes"]: continue
+            src_tags = []
+            for node in src["clash_nodes"]:
+                sb_node = convert_clash_to_singbox(node)
+                if sb_node:
+                    singbox_outbounds.append(sb_node)
+                    src_tags.append(sb_node['tag'])
+                else:
+                    skipped += 1
+            if src_tags:
+                singbox_source_groups.append({
+                    "type": "selector",
+                    "tag": src["group_name"],
+                    "outbounds": src_tags,
+                })
+
+        if singbox_outbounds:
+            all_group_tags = [g['tag'] for g in singbox_source_groups]
+            singbox_config = {
+                "log": {"level": "warn", "timestamp": True},
+                "dns": {
+                    "servers": [
+                        {"tag": "remote-dns", "address": "https://1.1.1.1/dns-query", "detour": "🚀 节点选择"},
+                        {"tag": "local-dns", "address": "https://223.5.5.5/dns-query", "detour": "direct"}
+                    ],
+                    "rules": [
+                        {"rule_set": "geosite-cn", "server": "local-dns"}
+                    ],
+                    "final": "remote-dns"
+                },
+                "inbounds": [
+                    {
+                        "type": "mixed",
+                        "tag": "mixed-in",
+                        "listen": "127.0.0.1",
+                        "listen_port": 2080
+                    },
+                    {
+                        "type": "tun",
+                        "tag": "tun-in",
+                        "address": ["172.19.0.1/30"],
+                        "auto_route": True,
+                        "strict_route": True
+                    }
+                ],
+                "outbounds": [
+                    {
+                        "type": "selector",
+                        "tag": "🚀 节点选择",
+                        "outbounds": ["♻️ 自动选择"] + all_group_tags
+                    },
+                    {
+                        "type": "urltest",
+                        "tag": "♻️ 自动选择",
+                        "outbounds": [o['tag'] for o in singbox_outbounds],
+                        "url": "https://www.gstatic.com/generate_204",
+                        "interval": "5m"
+                    }
+                ] + singbox_source_groups + singbox_outbounds + [
+                    {"type": "direct", "tag": "direct"}
+                ],
+                "route": {
+                    "rules": [
+                        {"action": "sniff"},
+                        {"protocol": "dns", "action": "hijack-dns"},
+                        {"ip_is_private": True, "outbound": "direct"},
+                        {"rule_set": "geosite-cn", "outbound": "direct"},
+                        {"rule_set": "geoip-cn", "outbound": "direct"}
+                    ],
+                    "rule_set": [
+                        {
+                            "tag": "geosite-cn",
+                            "type": "remote",
+                            "format": "binary",
+                            "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+                            "download_detour": "direct"
+                        },
+                        {
+                            "tag": "geoip-cn",
+                            "type": "remote",
+                            "format": "binary",
+                            "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+                            "download_detour": "direct"
+                        }
+                    ],
+                    "final": "🚀 节点选择",
+                    "auto_detect_interface": True
+                }
+            }
+
+            with open(OUTPUT_SINGBOX, 'w', encoding='utf-8') as f:
+                json.dump(singbox_config, f, indent=2, ensure_ascii=False)
+            skip_msg = f"（跳过 {skipped} 个不支持的节点）" if skipped else ""
+            print(f"🎉 Sing-box 写入完成：共 {len(singbox_outbounds)} 个节点{skip_msg}。")
 
 if __name__ == "__main__":
     main()
