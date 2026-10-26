@@ -26,16 +26,11 @@ jobs:
           # 会生成无父的孤儿提交，force push 后整个仓库历史都会被清空
           fetch-depth: 0
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-
       - name: Install dependencies
-        run: pip install requests pyyaml
+        run: python3 -m pip install requests pyyaml
 
       - name: Run Update Script
-        run: python auto_proxy.py
+        run: python3 auto_proxy.py
 
       - name: Commit and Push changes
         run: |

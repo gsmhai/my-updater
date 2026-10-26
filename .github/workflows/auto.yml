@@ -15,21 +15,16 @@ jobs:
 
     steps:
       - name: checkout repo content
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - name: setup python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-          
       - name: install python packages
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r requirements.txt
 
       - name: execute py script
         run: |
-          python auto_proxy.py
+          python3 auto_proxy.py
 
       - name: setup git config
         run: |
