@@ -553,11 +553,11 @@ rules:
 - GEOIP,CN,DIRECT
 - MATCH,免费加速器
 proxies:
-- name: '[tolinkshare2] 4.41 GB 时间:26-10-26 22:04'
+- name: '[tolinkshare2] 2.5 GB 时间:26-10-31 03:02'
   type: vless
   server: freea.glyphara.com
   port: 30301
-  uuid: 472b0fb5-fac4-42b0-9d1e-72732bfab20b
+  uuid: 1828220c-24e7-4802-a760-9aaa7153c23c
   udp: true
   tls: true
   skip-cert-verify: false
@@ -571,7 +571,7 @@ proxies:
   type: vless
   server: freea.glyphara.com
   port: 30301
-  uuid: 472b0fb5-fac4-42b0-9d1e-72732bfab20b
+  uuid: 1828220c-24e7-4802-a760-9aaa7153c23c
   udp: true
   tls: true
   skip-cert-verify: false
@@ -585,7 +585,7 @@ proxies:
   type: vless
   server: freea.glyphara.com
   port: 30303
-  uuid: 472b0fb5-fac4-42b0-9d1e-72732bfab20b
+  uuid: 1828220c-24e7-4802-a760-9aaa7153c23c
   udp: true
   tls: true
   skip-cert-verify: false
@@ -599,7 +599,7 @@ proxies:
   type: vless
   server: freea.glyphara.com
   port: 30401
-  uuid: 472b0fb5-fac4-42b0-9d1e-72732bfab20b
+  uuid: 1828220c-24e7-4802-a760-9aaa7153c23c
   udp: true
   tls: true
   skip-cert-verify: false
@@ -613,7 +613,7 @@ proxies:
   type: vless
   server: freea.glyphara.com
   port: 30402
-  uuid: 472b0fb5-fac4-42b0-9d1e-72732bfab20b
+  uuid: 1828220c-24e7-4802-a760-9aaa7153c23c
   udp: true
   tls: true
   skip-cert-verify: false
@@ -627,7 +627,7 @@ proxies:
   type: vless
   server: freea.glyphara.com
   port: 30403
-  uuid: 472b0fb5-fac4-42b0-9d1e-72732bfab20b
+  uuid: 1828220c-24e7-4802-a760-9aaa7153c23c
   udp: true
   tls: true
   skip-cert-verify: false
@@ -641,7 +641,7 @@ proxies:
   type: vless
   server: freea.glyphara.com
   port: 30701
-  uuid: 472b0fb5-fac4-42b0-9d1e-72732bfab20b
+  uuid: 1828220c-24e7-4802-a760-9aaa7153c23c
   udp: true
   tls: true
   skip-cert-verify: false
@@ -655,7 +655,7 @@ proxies:
   type: vless
   server: freea.glyphara.com
   port: 30703
-  uuid: 472b0fb5-fac4-42b0-9d1e-72732bfab20b
+  uuid: 1828220c-24e7-4802-a760-9aaa7153c23c
   udp: true
   tls: true
   skip-cert-verify: false
@@ -669,7 +669,7 @@ proxies:
   type: vless
   server: freea.glyphara.com
   port: 30101
-  uuid: 472b0fb5-fac4-42b0-9d1e-72732bfab20b
+  uuid: 1828220c-24e7-4802-a760-9aaa7153c23c
   udp: true
   tls: true
   skip-cert-verify: false
@@ -683,7 +683,7 @@ proxies:
   type: vless
   server: freea.glyphara.com
   port: 30102
-  uuid: 472b0fb5-fac4-42b0-9d1e-72732bfab20b
+  uuid: 1828220c-24e7-4802-a760-9aaa7153c23c
   udp: true
   tls: true
   skip-cert-verify: false
@@ -697,7 +697,7 @@ proxies:
   type: vless
   server: freea.glyphara.com
   port: 30103
-  uuid: 472b0fb5-fac4-42b0-9d1e-72732bfab20b
+  uuid: 1828220c-24e7-4802-a760-9aaa7153c23c
   udp: true
   tls: true
   skip-cert-verify: false
@@ -711,7 +711,7 @@ proxies:
   type: vless
   server: freea.glyphara.com
   port: 30201
-  uuid: 472b0fb5-fac4-42b0-9d1e-72732bfab20b
+  uuid: 1828220c-24e7-4802-a760-9aaa7153c23c
   udp: true
   tls: true
   skip-cert-verify: false
@@ -725,7 +725,7 @@ proxies:
   type: vless
   server: freea.glyphara.com
   port: 30202
-  uuid: 472b0fb5-fac4-42b0-9d1e-72732bfab20b
+  uuid: 1828220c-24e7-4802-a760-9aaa7153c23c
   udp: true
   tls: true
   skip-cert-verify: false
@@ -739,11 +739,11 @@ proxy-groups:
 - name: 免费加速器
   type: select
   proxies:
-  - tolinkshare2 4.41 GB  更新：26-10-26 22:04  上次：10-26 21:21  [1.3h]
-- name: tolinkshare2 4.41 GB  更新：26-10-26 22:04  上次：10-26 21:21  [1.3h]
+  - tolinkshare2 2.5 GB   更新：26-10-31 03:02  上次：10-31 02:33  [1.2h]
+- name: tolinkshare2 2.5 GB   更新：26-10-31 03:02  上次：10-31 02:33  [1.2h]
   type: select
   proxies:
-  - '[tolinkshare2] 4.41 GB 时间:26-10-26 22:04'
+  - '[tolinkshare2] 2.5 GB 时间:26-10-31 03:02'
   - '[tolinkshare2] 🇯🇵日本 101 | 1x JP'
   - '[tolinkshare2] 🇯🇵日本 103 | 1x JP'
   - '[tolinkshare2] 🇸🇬新加坡 101 | 1x SG'

@@ -60,14 +60,14 @@
       "tag": "🚀 节点选择",
       "outbounds": [
         "♻️ 自动选择",
-        "tolinkshare2 4.41 GB  更新：26-10-26 22:04  上次：10-26 21:21  [1.3h]"
+        "tolinkshare2 2.5 GB   更新：26-10-31 03:02  上次：10-31 02:33  [1.2h]"
       ]
     },
     {
       "type": "urltest",
       "tag": "♻️ 自动选择",
       "outbounds": [
-        "[tolinkshare2] 4.41 GB 时间:26-10-26 22:04",
+        "[tolinkshare2] 2.5 GB 时间:26-10-31 03:02",
         "[tolinkshare2] 🇯🇵日本 101 | 1x JP",
         "[tolinkshare2] 🇯🇵日本 103 | 1x JP",
         "[tolinkshare2] 🇸🇬新加坡 101 | 1x SG",
@@ -86,9 +86,9 @@
     },
     {
       "type": "selector",
-      "tag": "tolinkshare2 4.41 GB  更新：26-10-26 22:04  上次：10-26 21:21  [1.3h]",
+      "tag": "tolinkshare2 2.5 GB   更新：26-10-31 03:02  上次：10-31 02:33  [1.2h]",
       "outbounds": [
-        "[tolinkshare2] 4.41 GB 时间:26-10-26 22:04",
+        "[tolinkshare2] 2.5 GB 时间:26-10-31 03:02",
         "[tolinkshare2] 🇯🇵日本 101 | 1x JP",
         "[tolinkshare2] 🇯🇵日本 103 | 1x JP",
         "[tolinkshare2] 🇸🇬新加坡 101 | 1x SG",
@@ -105,10 +105,10 @@
     },
     {
       "type": "vless",
-      "tag": "[tolinkshare2] 4.41 GB 时间:26-10-26 22:04",
+      "tag": "[tolinkshare2] 2.5 GB 时间:26-10-31 03:02",
       "server": "freea.glyphara.com",
       "server_port": 30301,
-      "uuid": "472b0fb5-fac4-42b0-9d1e-72732bfab20b",
+      "uuid": "1828220c-24e7-4802-a760-9aaa7153c23c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -129,7 +129,7 @@
       "tag": "[tolinkshare2] 🇯🇵日本 101 | 1x JP",
       "server": "freea.glyphara.com",
       "server_port": 30301,
-      "uuid": "472b0fb5-fac4-42b0-9d1e-72732bfab20b",
+      "uuid": "1828220c-24e7-4802-a760-9aaa7153c23c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -150,7 +150,7 @@
       "tag": "[tolinkshare2] 🇯🇵日本 103 | 1x JP",
       "server": "freea.glyphara.com",
       "server_port": 30303,
-      "uuid": "472b0fb5-fac4-42b0-9d1e-72732bfab20b",
+      "uuid": "1828220c-24e7-4802-a760-9aaa7153c23c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -171,7 +171,7 @@
       "tag": "[tolinkshare2] 🇸🇬新加坡 101 | 1x SG",
       "server": "freea.glyphara.com",
       "server_port": 30401,
-      "uuid": "472b0fb5-fac4-42b0-9d1e-72732bfab20b",
+      "uuid": "1828220c-24e7-4802-a760-9aaa7153c23c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -192,7 +192,7 @@
       "tag": "[tolinkshare2] 🇸🇬新加坡 102 | 1x SG",
       "server": "freea.glyphara.com",
       "server_port": 30402,
-      "uuid": "472b0fb5-fac4-42b0-9d1e-72732bfab20b",
+      "uuid": "1828220c-24e7-4802-a760-9aaa7153c23c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -213,7 +213,7 @@
       "tag": "[tolinkshare2] 🇸🇬新加坡 103 | 1x SG",
       "server": "freea.glyphara.com",
       "server_port": 30403,
-      "uuid": "472b0fb5-fac4-42b0-9d1e-72732bfab20b",
+      "uuid": "1828220c-24e7-4802-a760-9aaa7153c23c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -234,7 +234,7 @@
       "tag": "[tolinkshare2] 🇺🇸美国 101 ChatGPT专用 | 1x US",
       "server": "freea.glyphara.com",
       "server_port": 30701,
-      "uuid": "472b0fb5-fac4-42b0-9d1e-72732bfab20b",
+      "uuid": "1828220c-24e7-4802-a760-9aaa7153c23c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -255,7 +255,7 @@
       "tag": "[tolinkshare2] 🇺🇸美国 103 ChatGPT专用 | 1x US",
       "server": "freea.glyphara.com",
       "server_port": 30703,
-      "uuid": "472b0fb5-fac4-42b0-9d1e-72732bfab20b",
+      "uuid": "1828220c-24e7-4802-a760-9aaa7153c23c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -276,7 +276,7 @@
       "tag": "[tolinkshare2] 🇭🇰香港 101 | 1x HK",
       "server": "freea.glyphara.com",
       "server_port": 30101,
-      "uuid": "472b0fb5-fac4-42b0-9d1e-72732bfab20b",
+      "uuid": "1828220c-24e7-4802-a760-9aaa7153c23c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -297,7 +297,7 @@
       "tag": "[tolinkshare2] 🇭🇰香港 102 | 1x HK",
       "server": "freea.glyphara.com",
       "server_port": 30102,
-      "uuid": "472b0fb5-fac4-42b0-9d1e-72732bfab20b",
+      "uuid": "1828220c-24e7-4802-a760-9aaa7153c23c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -318,7 +318,7 @@
       "tag": "[tolinkshare2] 🇭🇰香港 103 | 家宽 | 1x HK",
       "server": "freea.glyphara.com",
       "server_port": 30103,
-      "uuid": "472b0fb5-fac4-42b0-9d1e-72732bfab20b",
+      "uuid": "1828220c-24e7-4802-a760-9aaa7153c23c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -339,7 +339,7 @@
       "tag": "[tolinkshare2] 🇹🇼台湾 101 | 1x TW",
       "server": "freea.glyphara.com",
       "server_port": 30201,
-      "uuid": "472b0fb5-fac4-42b0-9d1e-72732bfab20b",
+      "uuid": "1828220c-24e7-4802-a760-9aaa7153c23c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -360,7 +360,7 @@
       "tag": "[tolinkshare2] 🇹🇼台湾 102 | 1x TW",
       "server": "freea.glyphara.com",
       "server_port": 30202,
-      "uuid": "472b0fb5-fac4-42b0-9d1e-72732bfab20b",
+      "uuid": "1828220c-24e7-4802-a760-9aaa7153c23c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
