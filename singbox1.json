@@ -1,0 +1,1694 @@
+{
+  "log": {
+    "level": "warn",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "remote-dns",
+        "address": "https://1.1.1.1/dns-query",
+        "detour": "🚀 节点选择",
+        "strategy": "ipv4_only"
+      },
+      {
+        "tag": "local-dns",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "direct",
+        "strategy": "ipv4_only"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "any",
+        "server": "local-dns"
+      },
+      {
+        "rule_set": "geosite-geolocation-!cn",
+        "server": "remote-dns"
+      },
+      {
+        "rule_set": "geosite-cn",
+        "server": "local-dns"
+      }
+    ],
+    "final": "remote-dns",
+    "strategy": "ipv4_only",
+    "independent_cache": true
+  },
+  "inbounds": [
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2080
+    },
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "address": [
+        "172.19.0.1/30"
+      ],
+      "auto_route": true,
+      "strict_route": true,
+      "stack": "mixed"
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "selector",
+      "tag": "🚀 节点选择",
+      "outbounds": [
+        "♻️ 自动选择",
+        "US美国(mibei77.com 米贝节点分享)",
+        "US美国(mibei77.com 米贝节点分享) (2)",
+        "US美国(mibei77.com 米贝节点分享) (3)",
+        "US美国(mibei77.com 米贝节点分享) (4)",
+        "US美国(mibei77.com 米贝节点分享) (5)",
+        "US美国(mibei77.com 米贝节点分享) (6)",
+        "US美国(mibei77.com 米贝节点分享) (7)",
+        "US美国(mibei77.com 米贝节点分享) (8)",
+        "US美国(mibei77.com 米贝节点分享) (9)",
+        "US美国(mibei77.com 米贝节点分享) (10)",
+        "US美国(mibei77.com 米贝节点分享) (11)",
+        "US美国(mibei77.com 米贝节点分享) (12)",
+        "US美国(mibei77.com 米贝节点分享) (13)",
+        "US美国(mibei77.com 米贝节点分享) (14)",
+        "US美国(mibei77.com 米贝节点分享) (15)",
+        "US美国(mibei77.com 米贝节点分享) (16)",
+        "US美国(mibei77.com 米贝节点分享) (17)",
+        "US美国(mibei77.com 米贝节点分享) (18)",
+        "US美国(mibei77.com 米贝节点分享) (19)",
+        "US美国(mibei77.com 米贝节点分享) (20)",
+        "US美国(mibei77.com 米贝节点分享) (21)",
+        "US美国(mibei77.com 米贝节点分享) (22)",
+        "US美国(mibei77.com 米贝节点分享) (23)",
+        "US美国(mibei77.com 米贝节点分享) (24)",
+        "US美国(mibei77.com 米贝节点分享) (25)",
+        "US美国(mibei77.com 米贝节点分享) (26)",
+        "US美国(mibei77.com 米贝节点分享) (27)",
+        "US美国(mibei77.com 米贝节点分享) (28)",
+        "US美国(mibei77.com 米贝节点分享) (29)",
+        "US美国(mibei77.com 米贝节点分享) (30)",
+        "US美国(mibei77.com 米贝节点分享) (31)",
+        "US美国(mibei77.com 米贝节点分享) (32)",
+        "US美国(mibei77.com 米贝节点分享) (33)",
+        "US美国(mibei77.com 米贝节点分享) (34)",
+        "US美国(mibei77.com 米贝节点分享) (35)",
+        "US美国(mibei77.com 米贝节点分享) (36)",
+        "RU俄罗斯(mibei77.com 米贝节点分享)",
+        "RU俄罗斯(mibei77.com 米贝节点分享) (2)",
+        "NL荷兰(mibei77.com 米贝节点分享)",
+        "NL荷兰(mibei77.com 米贝节点分享) (2)",
+        "NL荷兰(mibei77.com 米贝节点分享) (3)",
+        "NL荷兰(mibei77.com 米贝节点分享) (4)",
+        "NL荷兰(mibei77.com 米贝节点分享) (5)",
+        "NL荷兰(mibei77.com 米贝节点分享) (6)",
+        "NL荷兰(mibei77.com 米贝节点分享) (7)",
+        "NL荷兰(mibei77.com 米贝节点分享) (8)",
+        "NL荷兰(mibei77.com 米贝节点分享) (9)",
+        "NL荷兰(mibei77.com 米贝节点分享) (10)",
+        "NL荷兰(mibei77.com 米贝节点分享) (11)",
+        "JP日本(mibei77.com 米贝节点分享)",
+        "JP日本(mibei77.com 米贝节点分享) (2)",
+        "JP日本(mibei77.com 米贝节点分享) (3)",
+        "HK香港(mibei77.com 米贝节点分享)",
+        "HK香港(mibei77.com 米贝节点分享) (2)",
+        "GB英国(mibei77.com 米贝节点分享)",
+        "GB英国(mibei77.com 米贝节点分享) (2)",
+        "GB英国(mibei77.com 米贝节点分享) (3)",
+        "FR法国(mibei77.com 米贝节点分享)",
+        "DE德国(mibei77.com 米贝节点分享)",
+        "DE德国(mibei77.com 米贝节点分享) (2)",
+        "DE德国(mibei77.com 米贝节点分享) (3)",
+        "DE德国(mibei77.com 米贝节点分享) (4)",
+        "DE德国(mibei77.com 米贝节点分享) (5)",
+        "DE德国(mibei77.com 米贝节点分享) (6)",
+        "DE德国(mibei77.com 米贝节点分享) (7)",
+        "DE德国(mibei77.com 米贝节点分享) (8)",
+        "DE德国(mibei77.com 米贝节点分享) (9)",
+        "DE德国(mibei77.com 米贝节点分享) (10)",
+        "CA加拿大(mibei77.com 米贝节点分享)",
+        "CA加拿大(mibei77.com 米贝节点分享) (2)",
+        "CA加拿大(mibei77.com 米贝节点分享) (3)",
+        "CA加拿大(mibei77.com 米贝节点分享) (4)",
+        "CA加拿大(mibei77.com 米贝节点分享) (5)",
+        "CA加拿大(mibei77.com 米贝节点分享) (6)",
+        "CA加拿大(mibei77.com 米贝节点分享) (7)",
+        "CA加拿大(mibei77.com 米贝节点分享) (8)",
+        "CA加拿大(mibei77.com 米贝节点分享) (9)",
+        "CA加拿大(mibei77.com 米贝节点分享) (10)",
+        "CA加拿大(mibei77.com 米贝节点分享) (11)",
+        "意大利(mibei77.com 米贝节点分享)",
+        "意大利(mibei77.com 米贝节点分享) (2)",
+        "西班牙(mibei77.com 米贝节点分享)",
+        "西班牙(mibei77.com 米贝节点分享) (2)",
+        "西班牙(mibei77.com 米贝节点分享) (3)",
+        "西班牙(mibei77.com 米贝节点分享) (4)",
+        "西班牙(mibei77.com 米贝节点分享) (5)",
+        "泰国(mibei77.com 米贝节点分享)",
+        "塞舌尔(mibei77.com 米贝节点分享)",
+        "塞舌尔(mibei77.com 米贝节点分享) (2)",
+        "尼日利亚(mibei77.com 米贝节点分享)"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "♻️ 自动选择",
+      "outbounds": [
+        "US美国(mibei77.com 米贝节点分享)",
+        "US美国(mibei77.com 米贝节点分享) (2)",
+        "US美国(mibei77.com 米贝节点分享) (3)",
+        "US美国(mibei77.com 米贝节点分享) (4)",
+        "US美国(mibei77.com 米贝节点分享) (5)",
+        "US美国(mibei77.com 米贝节点分享) (6)",
+        "US美国(mibei77.com 米贝节点分享) (7)",
+        "US美国(mibei77.com 米贝节点分享) (8)",
+        "US美国(mibei77.com 米贝节点分享) (9)",
+        "US美国(mibei77.com 米贝节点分享) (10)",
+        "US美国(mibei77.com 米贝节点分享) (11)",
+        "US美国(mibei77.com 米贝节点分享) (12)",
+        "US美国(mibei77.com 米贝节点分享) (13)",
+        "US美国(mibei77.com 米贝节点分享) (14)",
+        "US美国(mibei77.com 米贝节点分享) (15)",
+        "US美国(mibei77.com 米贝节点分享) (16)",
+        "US美国(mibei77.com 米贝节点分享) (17)",
+        "US美国(mibei77.com 米贝节点分享) (18)",
+        "US美国(mibei77.com 米贝节点分享) (19)",
+        "US美国(mibei77.com 米贝节点分享) (20)",
+        "US美国(mibei77.com 米贝节点分享) (21)",
+        "US美国(mibei77.com 米贝节点分享) (22)",
+        "US美国(mibei77.com 米贝节点分享) (23)",
+        "US美国(mibei77.com 米贝节点分享) (24)",
+        "US美国(mibei77.com 米贝节点分享) (25)",
+        "US美国(mibei77.com 米贝节点分享) (26)",
+        "US美国(mibei77.com 米贝节点分享) (27)",
+        "US美国(mibei77.com 米贝节点分享) (28)",
+        "US美国(mibei77.com 米贝节点分享) (29)",
+        "US美国(mibei77.com 米贝节点分享) (30)",
+        "US美国(mibei77.com 米贝节点分享) (31)",
+        "US美国(mibei77.com 米贝节点分享) (32)",
+        "US美国(mibei77.com 米贝节点分享) (33)",
+        "US美国(mibei77.com 米贝节点分享) (34)",
+        "US美国(mibei77.com 米贝节点分享) (35)",
+        "US美国(mibei77.com 米贝节点分享) (36)",
+        "RU俄罗斯(mibei77.com 米贝节点分享)",
+        "RU俄罗斯(mibei77.com 米贝节点分享) (2)",
+        "NL荷兰(mibei77.com 米贝节点分享)",
+        "NL荷兰(mibei77.com 米贝节点分享) (2)",
+        "NL荷兰(mibei77.com 米贝节点分享) (3)",
+        "NL荷兰(mibei77.com 米贝节点分享) (4)",
+        "NL荷兰(mibei77.com 米贝节点分享) (5)",
+        "NL荷兰(mibei77.com 米贝节点分享) (6)",
+        "NL荷兰(mibei77.com 米贝节点分享) (7)",
+        "NL荷兰(mibei77.com 米贝节点分享) (8)",
+        "NL荷兰(mibei77.com 米贝节点分享) (9)",
+        "NL荷兰(mibei77.com 米贝节点分享) (10)",
+        "NL荷兰(mibei77.com 米贝节点分享) (11)",
+        "JP日本(mibei77.com 米贝节点分享)",
+        "JP日本(mibei77.com 米贝节点分享) (2)",
+        "JP日本(mibei77.com 米贝节点分享) (3)",
+        "HK香港(mibei77.com 米贝节点分享)",
+        "HK香港(mibei77.com 米贝节点分享) (2)",
+        "GB英国(mibei77.com 米贝节点分享)",
+        "GB英国(mibei77.com 米贝节点分享) (2)",
+        "GB英国(mibei77.com 米贝节点分享) (3)",
+        "FR法国(mibei77.com 米贝节点分享)",
+        "DE德国(mibei77.com 米贝节点分享)",
+        "DE德国(mibei77.com 米贝节点分享) (2)",
+        "DE德国(mibei77.com 米贝节点分享) (3)",
+        "DE德国(mibei77.com 米贝节点分享) (4)",
+        "DE德国(mibei77.com 米贝节点分享) (5)",
+        "DE德国(mibei77.com 米贝节点分享) (6)",
+        "DE德国(mibei77.com 米贝节点分享) (7)",
+        "DE德国(mibei77.com 米贝节点分享) (8)",
+        "DE德国(mibei77.com 米贝节点分享) (9)",
+        "DE德国(mibei77.com 米贝节点分享) (10)",
+        "CA加拿大(mibei77.com 米贝节点分享)",
+        "CA加拿大(mibei77.com 米贝节点分享) (2)",
+        "CA加拿大(mibei77.com 米贝节点分享) (3)",
+        "CA加拿大(mibei77.com 米贝节点分享) (4)",
+        "CA加拿大(mibei77.com 米贝节点分享) (5)",
+        "CA加拿大(mibei77.com 米贝节点分享) (6)",
+        "CA加拿大(mibei77.com 米贝节点分享) (7)",
+        "CA加拿大(mibei77.com 米贝节点分享) (8)",
+        "CA加拿大(mibei77.com 米贝节点分享) (9)",
+        "CA加拿大(mibei77.com 米贝节点分享) (10)",
+        "CA加拿大(mibei77.com 米贝节点分享) (11)",
+        "意大利(mibei77.com 米贝节点分享)",
+        "意大利(mibei77.com 米贝节点分享) (2)",
+        "西班牙(mibei77.com 米贝节点分享)",
+        "西班牙(mibei77.com 米贝节点分享) (2)",
+        "西班牙(mibei77.com 米贝节点分享) (3)",
+        "西班牙(mibei77.com 米贝节点分享) (4)",
+        "西班牙(mibei77.com 米贝节点分享) (5)",
+        "泰国(mibei77.com 米贝节点分享)",
+        "塞舌尔(mibei77.com 米贝节点分享)",
+        "塞舌尔(mibei77.com 米贝节点分享) (2)",
+        "尼日利亚(mibei77.com 米贝节点分享)"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "5m"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "US美国(mibei77.com 米贝节点分享)",
+      "server": "202.50.253.63",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "US美国(mibei77.com 米贝节点分享) (2)",
+      "server": "202.50.253.36",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "US美国(mibei77.com 米贝节点分享) (3)",
+      "server": "202.50.253.90",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "US美国(mibei77.com 米贝节点分享) (4)",
+      "server": "202.50.253.54",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "US美国(mibei77.com 米贝节点分享) (5)",
+      "server": "202.50.253.45",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "US美国(mibei77.com 米贝节点分享) (6)",
+      "server": "202.50.253.99",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "US美国(mibei77.com 米贝节点分享) (7)",
+      "server": "202.50.253.18",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "US美国(mibei77.com 米贝节点分享) (8)",
+      "server": "202.50.253.72",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (9)",
+      "server": "dey.lnmarketplace.net",
+      "server_port": 443,
+      "uuid": "3536e1fa-0850-44d1-b123-925ce12476cf",
+      "tls": {
+        "enabled": true,
+        "server_name": "dey.lnmarketplace.net"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (10)",
+      "server": "dey.lnmarketplace.net",
+      "server_port": 443,
+      "uuid": "3536e1fa-0850-44d1-b123-925ce12476cf",
+      "tls": {
+        "enabled": true,
+        "server_name": "dey.lnmarketplace.net"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (11)",
+      "server": "dey.lnmarketplace.net",
+      "server_port": 443,
+      "uuid": "3536e1fa-0850-44d1-b123-925ce12476cf",
+      "tls": {
+        "enabled": true,
+        "server_name": "dey.lnmarketplace.net"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "US美国(mibei77.com 米贝节点分享) (12)",
+      "server": "sclass-c1.catcat321.com",
+      "server_port": 20086,
+      "password": "d9064589-74af-432a-9390-5d8a9da281bf",
+      "tls": {
+        "enabled": true,
+        "server_name": "hk.catxstar.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (13)",
+      "server": "2a14:3f87:f001:46::a",
+      "server_port": 443,
+      "uuid": "3536e1fa-0850-44d1-b123-925ce12476cf",
+      "tls": {
+        "enabled": true,
+        "server_name": "dey.lnmarketplace.net"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (14)",
+      "server": "2a14:3f87:f001:46::a",
+      "server_port": 443,
+      "uuid": "3536e1fa-0850-44d1-b123-925ce12476cf",
+      "tls": {
+        "enabled": true,
+        "server_name": "dey.lnmarketplace.net"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (15)",
+      "server": "2a14:3f87:f001:46::a",
+      "server_port": 443,
+      "uuid": "3536e1fa-0850-44d1-b123-925ce12476cf",
+      "tls": {
+        "enabled": true,
+        "server_name": "dey.lnmarketplace.net"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (16)",
+      "server": "196.199.122.2",
+      "server_port": 443,
+      "uuid": "4201786b-d99b-4147-a5f0-20d47acddb81",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "7aa271t.es1.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE",
+          "short_id": "42426c882c5fcd41"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (17)",
+      "server": "196.196.149.80",
+      "server_port": 443,
+      "uuid": "4201786b-d99b-4147-a5f0-20d47acddb81",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "7aa271t.es1.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE",
+          "short_id": "42426c882c5fcd41"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (18)",
+      "server": "2.26.88.140",
+      "server_port": 4443,
+      "uuid": "a35c508f-4d5d-4531-842e-6e9d43c762c0",
+      "tls": {
+        "enabled": true,
+        "server_name": "lv3.nexfile.net"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (19)",
+      "server": "lv3.nexfile.net",
+      "server_port": 4443,
+      "uuid": "a35c508f-4d5d-4531-842e-6e9d43c762c0",
+      "tls": {
+        "enabled": true,
+        "server_name": "lv3.nexfile.net"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (20)",
+      "server": "200.102.179.69",
+      "server_port": 443,
+      "uuid": "7592ca5c-b352-4562-8856-a9c936a3331b",
+      "tls": {
+        "enabled": true,
+        "server_name": "dmbdnpctq8hjxx.hat.onl"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (21)",
+      "server": "200.102.179.69",
+      "server_port": 443,
+      "uuid": "7592ca5c-b352-4562-8856-a9c936a3331b",
+      "tls": {
+        "enabled": true,
+        "server_name": "dmbdnpctq8hjxx.hat.onl"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (22)",
+      "server": "13.143.165.124",
+      "server_port": 8443,
+      "uuid": "99c5b713-dedf-4a10-8070-916ff3f49b0e",
+      "tls": {
+        "enabled": true,
+        "server_name": "fs.qicai99.com"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (23)",
+      "server": "8.35.211.73",
+      "server_port": 2087,
+      "uuid": "9f534ac4-3c58-4a16-8b74-13dff09a0cf1",
+      "tls": {
+        "enabled": true,
+        "server_name": "d39333476.pages.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/resource",
+        "headers": {
+          "Host": "d39333476.pages.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (24)",
+      "server": "45.88.176.223",
+      "server_port": 443,
+      "uuid": "d73e3cdc-a80b-4e73-a11b-cc467d7a84f8",
+      "tls": {
+        "enabled": true,
+        "server_name": "m.yourvibe.my"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (25)",
+      "server": "196.196.148.63",
+      "server_port": 443,
+      "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "tls": {
+        "enabled": true,
+        "server_name": "fc82dfx.nl8.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "dtO7khFLUkpFDQOtNzo4Th4hJKLoPSY2VtD_9k4Hgiw",
+          "short_id": "7b2b1a14a6e0630d"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (26)",
+      "server": "188.114.98.112",
+      "server_port": 80,
+      "uuid": "0991a0c4-0ee5-4213-af89-7ad589f853f3",
+      "transport": {
+        "type": "ws",
+        "path": "/ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY----ELiV2-RAY?ed=2560",
+        "headers": {
+          "Host": "elenaaaaaaaaaa.cloudns.pro."
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (27)",
+      "server": "8.35.211.188",
+      "server_port": 8443,
+      "uuid": "2b181a3a-c001-4145-845a-5d43a43837d5",
+      "tls": {
+        "enabled": true,
+        "server_name": "vpn-1fj.pages.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "vpn-1fj.pages.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (28)",
+      "server": "96.44.178.67",
+      "server_port": 52281,
+      "uuid": "ef3d730e-185e-4f2c-b716-26d113046bf2",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "shop-eu-fr.amd.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "Dqi139W6LrS-hHFHhcIxQPY4lb6t54kZFrB2XEPr9A8",
+          "short_id": "dccdbd1d7b98b1"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (29)",
+      "server": "204.152.198.135",
+      "server_port": 57938,
+      "uuid": "d62f1228-251a-4fa9-a739-093244083cab",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.docs.nvidia.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "W_VahGtN28jS59zNCnex-Bfpz2eNVY5VveQwkHoUZgQ",
+          "short_id": "acb05d85369b"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (30)",
+      "server": "185.193.29.123",
+      "server_port": 443,
+      "uuid": "1d16c6e0-1bbe-435b-b661-90043fee999c",
+      "tls": {
+        "enabled": true,
+        "server_name": "notls.lukongtou.eu.org"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "Telegram-WangCai2🇨🇳",
+        "headers": {
+          "Host": "notls.lukongtou.eu.org"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (31)",
+      "server": "lv3.nexfile.net",
+      "server_port": 4443,
+      "uuid": "a35c508f-4d5d-4531-842e-6e9d43c762c0",
+      "tls": {
+        "enabled": true,
+        "server_name": "lv3.nexfile.net"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (32)",
+      "server": "38.207.162.122",
+      "server_port": 443,
+      "uuid": "4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "tls": {
+        "enabled": true,
+        "server_name": "jp3.yohototo.top"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tyxyws",
+        "headers": {
+          "Host": "jp3.yohototo.top"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (33)",
+      "server": "103.116.7.67",
+      "server_port": 2083,
+      "uuid": "40af9131-d540-448a-bc56-5bba147a1dc3",
+      "tls": {
+        "enabled": true,
+        "server_name": "proxy-1cu.pages.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "proxy-1cu.pages.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (34)",
+      "server": "154.211.8.152",
+      "server_port": 2053,
+      "uuid": "40af9131-d540-448a-bc56-5bba147a1dc3",
+      "tls": {
+        "enabled": true,
+        "server_name": "proxy-1cu.pages.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "proxy-1cu.pages.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (35)",
+      "server": "196.196.148.63",
+      "server_port": 443,
+      "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "tls": {
+        "enabled": true,
+        "server_name": "717252g.nl8.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "PD8Jdlg3xB9QY--jwQjp8PFPzCS8-Oryw6-HWBcHMFU",
+          "short_id": "d3bd772514c87d28"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "204adda7e3da"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "US美国(mibei77.com 米贝节点分享) (36)",
+      "server": "196.196.148.85",
+      "server_port": 443,
+      "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "tls": {
+        "enabled": true,
+        "server_name": "5d0319t.nl7.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs",
+          "short_id": "361d0dd59c70516f"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "RU俄罗斯(mibei77.com 米贝节点分享)",
+      "server": "cdn.oldertown.ru",
+      "server_port": 443,
+      "uuid": "29777784-b5ad-4e2a-be7b-335f033ab97c",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn.oldertown.ru"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "RU俄罗斯(mibei77.com 米贝节点分享) (2)",
+      "server": "5.129.202.80",
+      "server_port": 443,
+      "uuid": "7ad63b26-bf70-4872-8fab-ebaf73a1e19d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "mirror-50.topp-con.xyz",
+        "reality": {
+          "enabled": true,
+          "public_key": "NY2bvH4IFKTstWkBWwyU5MmlzuKk0nU08cBoHlti2S8",
+          "short_id": "2ef2b10d5143d798"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "NL荷兰(mibei77.com 米贝节点分享)",
+      "server": "dey.lnmarketplace.net",
+      "server_port": 443,
+      "uuid": "3536e1fa-0850-44d1-b123-925ce12476cf",
+      "tls": {
+        "enabled": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "NL荷兰(mibei77.com 米贝节点分享) (2)",
+      "server": "dey.lnmarketplace.net",
+      "server_port": 443,
+      "uuid": "3536e1fa-0850-44d1-b123-925ce12476cf",
+      "tls": {
+        "enabled": true,
+        "server_name": "dey.lnmarketplace.net"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "NL荷兰(mibei77.com 米贝节点分享) (3)",
+      "server": "dey.lnmarketplace.net",
+      "server_port": 443,
+      "uuid": "3536e1fa-0850-44d1-b123-925ce12476cf",
+      "tls": {
+        "enabled": true,
+        "server_name": "dey.lnmarketplace.net"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "NL荷兰(mibei77.com 米贝节点分享) (4)",
+      "server": "2a14:3f87:f001:46::a",
+      "server_port": 443,
+      "uuid": "3536e1fa-0850-44d1-b123-925ce12476cf",
+      "tls": {
+        "enabled": true,
+        "server_name": "dey.lnmarketplace.net"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "NL荷兰(mibei77.com 米贝节点分享) (5)",
+      "server": "api.ferrin.uk",
+      "server_port": 443,
+      "uuid": "7d1a74fd-8a38-4a29-863f-5da53a9e557e",
+      "tls": {
+        "enabled": true,
+        "server_name": "7d1a74fd.ferrin.uk"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "NL荷兰(mibei77.com 米贝节点分享) (6)",
+      "server": "104.171.135.229",
+      "server_port": 443,
+      "uuid": "Fluffy_VPN-Oth8rOq3",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "absolute-disaster.org",
+        "reality": {
+          "enabled": true,
+          "public_key": "mpo4BIcoWiMXAQGt5a8IJ4MFkPJQyLC50dO_bXzC7z0",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "NL荷兰(mibei77.com 米贝节点分享) (7)",
+      "server": "5.35.44.218",
+      "server_port": 8443,
+      "uuid": "549766c3-fa5f-471e-8031-ffc1f8d5064f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "nl17.blog-forme.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "bxCIwojWO_edyWgi_QS-BOEnbX-prYu5B1hN_7Skgnc",
+          "short_id": "b6efdae4d829da97"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "NL荷兰(mibei77.com 米贝节点分享) (8)",
+      "server": "ru7e2bab87cc39.eu-cdn539.com",
+      "server_port": 443,
+      "uuid": "e75ad2eb-6c1f-45ce-8023-f5f10875df66",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru7e2bab87cc39.eu-cdn539.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "lews1n_fypGexd_dMofEO4Vy1ULsFeVIFa90MMY3pm4",
+          "short_id": "3992cc7fb9fcbe58"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "NL荷兰(mibei77.com 米贝节点分享) (9)",
+      "server": "79.182.39.131",
+      "server_port": 443,
+      "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "tls": {
+        "enabled": true,
+        "server_name": "717252g.nl8.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "PD8Jdlg3xB9QY--jwQjp8PFPzCS8-Oryw6-HWBcHMFU",
+          "short_id": "d3bd772514c87d28"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "204adda7e3da"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "NL荷兰(mibei77.com 米贝节点分享) (10)",
+      "server": "5.35.44.218",
+      "server_port": 8443,
+      "uuid": "549766c3-fa5f-471e-8031-ffc1f8d5064f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "nl17.blog-forme.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "bxCIwojWO_edyWgi_QS-BOEnbX-prYu5B1hN_7Skgnc",
+          "short_id": "b6efdae4d829da97"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "NL荷兰(mibei77.com 米贝节点分享) (11)",
+      "server": "188.164.248.48",
+      "server_port": 2083,
+      "uuid": "a21b9103-1693-49c1-8dc9-e8e8098ee969",
+      "tls": {
+        "enabled": true,
+        "server_name": "helloapps.cc.cd"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "helloapps.cc.cd"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "JP日本(mibei77.com 米贝节点分享)",
+      "server": "196.196.148.63",
+      "server_port": 443,
+      "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "tls": {
+        "enabled": true,
+        "server_name": "fc82dfx.nl8.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "dtO7khFLUkpFDQOtNzo4Th4hJKLoPSY2VtD_9k4Hgiw",
+          "short_id": "7b2b1a14a6e0630d"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "JP日本(mibei77.com 米贝节点分享) (2)",
+      "server": "196.196.149.80",
+      "server_port": 443,
+      "uuid": "4201786b-d99b-4147-a5f0-20d47acddb81",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "7aa271t.es1.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE",
+          "short_id": "42426c882c5fcd41"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "JP日本(mibei77.com 米贝节点分享) (3)",
+      "server": "38.47.96.220",
+      "server_port": 11424,
+      "uuid": "1d16c6e0-1bbe-435b-b661-90043fee999c",
+      "tls": {
+        "enabled": true,
+        "server_name": "notls.lukongtou.eu.org"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "Telegram-WangCai2🇨🇳",
+        "headers": {
+          "Host": "notls.lukongtou.eu.org"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "HK香港(mibei77.com 米贝节点分享)",
+      "server": "dey.lnmarketplace.net",
+      "server_port": 443,
+      "uuid": "3536e1fa-0850-44d1-b123-925ce12476cf",
+      "tls": {
+        "enabled": true,
+        "server_name": "dey.lnmarketplace.net"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "HK香港(mibei77.com 米贝节点分享) (2)",
+      "server": "103.219.195.65",
+      "server_port": 443,
+      "uuid": "4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "tls": {
+        "enabled": true,
+        "server_name": "jp3.yohototo.top"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tyxyws",
+        "headers": {
+          "Host": "jp3.yohototo.top"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "GB英国(mibei77.com 米贝节点分享)",
+      "server": "sclass-c1.catcat321.com",
+      "server_port": 20086,
+      "password": "d9064589-74af-432a-9390-5d8a9da281bf",
+      "tls": {
+        "enabled": true,
+        "server_name": "hk.catxstar.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "GB英国(mibei77.com 米贝节点分享) (2)",
+      "server": "2.26.251.236",
+      "server_port": 443,
+      "uuid": "c16e8cdb-65dd-4049-bc65-14c051b8a6c6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "mental-deprivation.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "1iVMMhJZgXHRY7tRlR-1kypF0YeaBcB7EjcfHRsYZX4",
+          "short_id": "4ff31b18d1bd8227"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "GB英国(mibei77.com 米贝节点分享) (3)",
+      "server": "185.122.167.103",
+      "server_port": 59130,
+      "uuid": "b771804e-a62c-429f-a56c-9f0a452d8f6e",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "nvplm.stg.nvidia.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "6Lh48ni3w8oe9QW3xVzNMIE5LU-p5VPHPMCUtVMOmgo",
+          "short_id": "14"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "FR法国(mibei77.com 米贝节点分享)",
+      "server": "sclass-00.catcat321.com",
+      "server_port": 20123,
+      "password": "d9064589-74af-432a-9390-5d8a9da281bf",
+      "tls": {
+        "enabled": true,
+        "server_name": "hk.catxstar.com"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "DE德国(mibei77.com 米贝节点分享)",
+      "server": "2.26.251.236",
+      "server_port": 443,
+      "uuid": "c16e8cdb-65dd-4049-bc65-14c051b8a6c6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "mental-deprivation.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "1iVMMhJZgXHRY7tRlR-1kypF0YeaBcB7EjcfHRsYZX4",
+          "short_id": "4ff31b18d1bd8227"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "DE德国(mibei77.com 米贝节点分享) (2)",
+      "server": "dey.lnmarketplace.net",
+      "server_port": 443,
+      "uuid": "3536e1fa-0850-44d1-b123-925ce12476cf",
+      "tls": {
+        "enabled": true,
+        "server_name": "dey.lnmarketplace.net"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "DE德国(mibei77.com 米贝节点分享) (3)",
+      "server": "dey.lnmarketplace.net",
+      "server_port": 443,
+      "uuid": "3536e1fa-0850-44d1-b123-925ce12476cf",
+      "tls": {
+        "enabled": true,
+        "server_name": "dey.lnmarketplace.net"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "DE德国(mibei77.com 米贝节点分享) (4)",
+      "server": "2.26.251.236",
+      "server_port": 443,
+      "uuid": "c16e8cdb-65dd-4049-bc65-14c051b8a6c6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "mental-deprivation.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "1iVMMhJZgXHRY7tRlR-1kypF0YeaBcB7EjcfHRsYZX4",
+          "short_id": "4ff31b18d1bd8227"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "DE德国(mibei77.com 米贝节点分享) (5)",
+      "server": "104.18.42.98",
+      "server_port": 443,
+      "uuid": "4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "tls": {
+        "enabled": true,
+        "server_name": "jp3.yohototo.top"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tyxyws",
+        "headers": {
+          "Host": "jp3.yohototo.top"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "DE德国(mibei77.com 米贝节点分享) (6)",
+      "server": "n1.topingr.ir",
+      "server_port": 443,
+      "uuid": "84be02cf-c5c5-4b33-ba26-31b5f8320033",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn2.zovip2.ir"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/api/v3/pulse"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "DE德国(mibei77.com 米贝节点分享) (7)",
+      "server": "86.107.179.250",
+      "server_port": 443,
+      "uuid": "e75ad2eb-6c1f-45ce-8023-f5f10875df66",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "edge-5c4a0a8e13a6.eu-cdn391.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "8ekBZQk5UXxYvELwhchzklwJ5H9-W3rkZ1eAVVF1xlI",
+          "short_id": "b39ae58a4dcff57d"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "DE德国(mibei77.com 米贝节点分享) (8)",
+      "server": "217.60.27.93",
+      "server_port": 443,
+      "uuid": "549766c3-fa5f-471e-8031-ffc1f8d5064f",
+      "tls": {
+        "enabled": true,
+        "server_name": "tgde.blog-forme.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "2VsrxDroL0paeyBtGkQ5zfhMOXqwti5kDZPkvh1xJgs",
+          "short_id": "8424ce89ccd55f65"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "DE德国(mibei77.com 米贝节点分享) (9)",
+      "server": "188.114.98.0",
+      "server_port": 443,
+      "uuid": "99c5b713-dedf-4a10-8070-916ff3f49b0e",
+      "tls": {
+        "enabled": true,
+        "server_name": "fs.qicai99.com"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "DE德国(mibei77.com 米贝节点分享) (10)",
+      "server": "cucc.cloudflare.seeck.cn",
+      "server_port": 443,
+      "uuid": "99c5b713-dedf-4a10-8070-916ff3f49b0e",
+      "tls": {
+        "enabled": true,
+        "server_name": "fs.qicai99.com"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CA加拿大(mibei77.com 米贝节点分享)",
+      "server": "dey.lnmarketplace.net",
+      "server_port": 443,
+      "uuid": "3536e1fa-0850-44d1-b123-925ce12476cf",
+      "tls": {
+        "enabled": true,
+        "server_name": "dey.lnmarketplace.net"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CA加拿大(mibei77.com 米贝节点分享) (2)",
+      "server": "172.64.152.19",
+      "server_port": 443,
+      "uuid": "4e4f1f70-5e56-4a76-bb9d-db087f4690c4",
+      "tls": {
+        "enabled": true,
+        "server_name": "jp3.yohototo.top"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/tyxyws",
+        "headers": {
+          "Host": "jp3.yohototo.top"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CA加拿大(mibei77.com 米贝节点分享) (3)",
+      "server": "172.64.149.88",
+      "server_port": 443,
+      "uuid": "d37a75db-76b6-4db8-b213-0d5b044d138d",
+      "tls": {
+        "enabled": true,
+        "server_name": "top-e4s.pages.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "top-e4s.pages.dev"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CA加拿大(mibei77.com 米贝节点分享) (4)",
+      "server": "104.16.160.8",
+      "server_port": 8443,
+      "uuid": "1662f377-776b-4e49-90d6-dd5b2c7920c8",
+      "tls": {
+        "enabled": true,
+        "server_name": "3m.818567.xyz"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CA加拿大(mibei77.com 米贝节点分享) (5)",
+      "server": "104.18.162.1",
+      "server_port": 8443,
+      "uuid": "1662f377-776b-4e49-90d6-dd5b2c7920c8",
+      "tls": {
+        "enabled": true,
+        "server_name": "3m.818567.xyz"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CA加拿大(mibei77.com 米贝节点分享) (6)",
+      "server": "104.17.147.208",
+      "server_port": 443,
+      "uuid": "258ca28a-d982-4a40-b620-7c1c81108060",
+      "tls": {
+        "enabled": true,
+        "server_name": "b.rack.sxsc.dpdns.org"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/?ed=2048",
+        "headers": {
+          "Host": "b.rack.sxsc.dpdns.org"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CA加拿大(mibei77.com 米贝节点分享) (7)",
+      "server": "3m.818567.xyz",
+      "server_port": 8443,
+      "uuid": "1662f377-776b-4e49-90d6-dd5b2c7920c8",
+      "tls": {
+        "enabled": true,
+        "server_name": "3m.818567.xyz"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CA加拿大(mibei77.com 米贝节点分享) (8)",
+      "server": "3m.818567.xyz",
+      "server_port": 8443,
+      "uuid": "1662f377-776b-4e49-90d6-dd5b2c7920c8",
+      "tls": {
+        "enabled": true,
+        "server_name": "3m.818567.xyz"
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "CA加拿大(mibei77.com 米贝节点分享) (9)",
+      "server": "www.wto.org",
+      "server_port": 8443,
+      "password": "ec1fa47d-4eac-4b3f-8cae-4a2982d43e2f",
+      "tls": {
+        "enabled": true,
+        "server_name": "jiangjc.pages.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "jiangjc.pages.dev"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "CA加拿大(mibei77.com 米贝节点分享) (10)",
+      "server": "www.wto.org",
+      "server_port": 8443,
+      "password": "ec1fa47d-4eac-4b3f-8cae-4a2982d43e2f",
+      "tls": {
+        "enabled": true,
+        "server_name": "jiangjc.pages.dev"
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "CA加拿大(mibei77.com 米贝节点分享) (11)",
+      "server": "104.17.162.3",
+      "server_port": 8443,
+      "uuid": "1662f377-776b-4e49-90d6-dd5b2c7920c8",
+      "tls": {
+        "enabled": true,
+        "server_name": "3m.818567.xyz"
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "意大利(mibei77.com 米贝节点分享)",
+      "server": "202.50.253.81",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "意大利(mibei77.com 米贝节点分享) (2)",
+      "server": "202.50.253.27",
+      "server_port": 19999,
+      "method": "aes-256-gcm",
+      "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
+    },
+    {
+      "type": "vless",
+      "tag": "西班牙(mibei77.com 米贝节点分享)",
+      "server": "196.196.148.85",
+      "server_port": 443,
+      "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "tls": {
+        "enabled": true,
+        "server_name": "5d0319t.nl7.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs",
+          "short_id": "361d0dd59c70516f"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "西班牙(mibei77.com 米贝节点分享) (2)",
+      "server": "edge-d6d4b0609348.eu-cdn391.com",
+      "server_port": 443,
+      "uuid": "e75ad2eb-6c1f-45ce-8023-f5f10875df66",
+      "tls": {
+        "enabled": true,
+        "server_name": "edge-d6d4b0609348.eu-cdn391.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "aDqvXSCQ_psc3zy9P_5sfy4bVXMVZsyUEIiyTgq-OlA",
+          "short_id": "1a083bf915dd9164"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "西班牙(mibei77.com 米贝节点分享) (3)",
+      "server": "196.245.52.187",
+      "server_port": 443,
+      "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "tls": {
+        "enabled": true,
+        "server_name": "35295cx.us8.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "LsaTohbE6CqCH9UbYKwIybVXG3E5Wgz_X9czqas2LAI",
+          "short_id": "9acff4d98e2fbcc6"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "西班牙(mibei77.com 米贝节点分享) (4)",
+      "server": "196.245.52.183",
+      "server_port": 443,
+      "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "tls": {
+        "enabled": true,
+        "server_name": "15b171g.nl7.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE",
+          "short_id": "50a749f0eccb628c"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "5b79e8a94241"
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "西班牙(mibei77.com 米贝节点分享) (5)",
+      "server": "196.196.149.80",
+      "server_port": 443,
+      "uuid": "4201786b-d99b-4147-a5f0-20d47acddb81",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "7aa271t.es1.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE",
+          "short_id": "42426c882c5fcd41"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "泰国(mibei77.com 米贝节点分享)",
+      "server": "5.129.202.80",
+      "server_port": 443,
+      "uuid": "7ad63b26-bf70-4872-8fab-ebaf73a1e19d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "mirror-50.topp-con.xyz",
+        "reality": {
+          "enabled": true,
+          "public_key": "NY2bvH4IFKTstWkBWwyU5MmlzuKk0nU08cBoHlti2S8",
+          "short_id": "2ef2b10d5143d798"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "塞舌尔(mibei77.com 米贝节点分享)",
+      "server": "196.245.52.183",
+      "server_port": 443,
+      "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "tls": {
+        "enabled": true,
+        "server_name": "e60833x.nl7.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "jIRVNEf9SpuWP2nJrAbHGGIUnfzOmwZZlrNGw-Y-O2Q",
+          "short_id": "2d2598d60447a967"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "塞舌尔(mibei77.com 米贝节点分享) (2)",
+      "server": "196.196.148.85",
+      "server_port": 443,
+      "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
+      "tls": {
+        "enabled": true,
+        "server_name": "5d0319t.nl7.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs",
+          "short_id": "361d0dd59c70516f"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "尼日利亚(mibei77.com 米贝节点分享)",
+      "server": "196.196.149.81",
+      "server_port": 443,
+      "uuid": "4201786b-d99b-4147-a5f0-20d47acddb81",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "7aa271t.es1.h1clayd.click",
+        "reality": {
+          "enabled": true,
+          "public_key": "ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE",
+          "short_id": "42426c882c5fcd41"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "protocol": "dns",
+        "action": "hijack-dns"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      },
+      {
+        "rule_set": "geosite-geolocation-!cn",
+        "outbound": "🚀 节点选择"
+      },
+      {
+        "rule_set": "geosite-cn",
+        "outbound": "direct"
+      },
+      {
+        "action": "resolve",
+        "strategy": "ipv4_only"
+      },
+      {
+        "rule_set": "geoip-cn",
+        "outbound": "direct"
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "geosite-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
+        "download_detour": "🚀 节点选择"
+      },
+      {
+        "tag": "geosite-geolocation-!cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
+        "download_detour": "🚀 节点选择"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+        "download_detour": "🚀 节点选择"
+      }
+    ],
+    "final": "🚀 节点选择",
+    "auto_detect_interface": true
+  }
+}
