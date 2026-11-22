@@ -7484,7 +7484,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -7537,7 +7537,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -7562,7 +7562,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -7576,7 +7576,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -7640,7 +7640,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "qq"
         }
       }
     },
@@ -7654,7 +7654,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -7668,7 +7668,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         }
       }
     },
@@ -7693,7 +7693,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
       }
     },
