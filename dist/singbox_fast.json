@@ -7464,7 +7464,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         }
       }
     },
@@ -7478,7 +7478,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -7492,7 +7492,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         }
       }
     },
@@ -7517,7 +7517,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -7542,7 +7542,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -7556,7 +7556,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -7570,7 +7570,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
       }
     },
@@ -7595,7 +7595,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "safari"
         }
       }
     },
@@ -7634,7 +7634,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -7648,7 +7648,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
       }
     },
@@ -7673,7 +7673,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "ios"
         }
       }
     },
