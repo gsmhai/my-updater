@@ -5,6 +5,27 @@ log-level: warning
 ipv6: false
 unified-delay: true
 tcp-concurrent: true
+sniffer:
+  enable: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports:
+      - 80
+      - 8080-8880
+      override-destination: true
+    TLS:
+      ports:
+      - 443
+      - 8443
+    QUIC:
+      ports:
+      - 443
+      - 8443
+  skip-domain:
+  - Mijia Cloud
+  - +.push.apple.com
 dns:
   enable: true
   listen: 127.0.0.1:1053
@@ -15,11 +36,36 @@ dns:
   fake-ip-filter:
   - '*.lan'
   - '*.local'
-  - localhost.ptlogin2.qq.com
+  - '*.localdomain'
+  - '*.example'
+  - '*.invalid'
+  - '*.localhost'
+  - '*.test'
+  - '*.home.arpa'
+  - localhost.*
   - +.msftconnecttest.com
   - +.msftncsi.com
+  - captive.apple.com
+  - connectivitycheck.gstatic.com
   - time.*.com
+  - time.*.gov
+  - time.*.edu.cn
+  - time.*.apple.com
   - ntp.*.com
+  - '*.ntp.org.cn'
+  - +.pool.ntp.org
+  - +.stun.*.*
+  - +.stun.*.*.*
+  - +.stun.*.*.*.*
+  - stun.*.*
+  - stun.l.google.com
+  - localhost.ptlogin2.qq.com
+  - localhost.sec.qq.com
+  - +.srv.nintendo.net
+  - +.stun.playstation.net
+  - xbox.*.*.microsoft.com
+  - +.xboxlive.com
+  - +.battlenet.com.cn
   default-nameserver:
   - 223.5.5.5
   - 119.29.29.29
@@ -2650,14 +2696,14 @@ proxies:
   port: 24422
   udp: true
   password: "94e30165-0054-4b9d-9122-9db723cf58c1"
-  client-fingerprint: ios
+  client-fingerprint: safari
 - name: 🇺🇸 US 美国-43 | [A:v2raya_ndxy]
   type: trojan
   server: v1us9.stablenode.cloud
   port: 24413
   udp: true
   password: "94e30165-0054-4b9d-9122-9db723cf58c1"
-  client-fingerprint: edge
+  client-fingerprint: firefox
 - name: 🇬🇧 GB 英国-01 | [A:v2raya_ndxy]
   type: trojan
   server: app.ig.com
@@ -2678,7 +2724,7 @@ proxies:
   port: 443
   udp: true
   password: "94e30165-0054-4b9d-9122-9db723cf58c1"
-  client-fingerprint: chrome
+  client-fingerprint: qq
 - name: 🇮🇳 IN 印度-14 | [A:v2raya_ndxy]
   type: trojan
   server: edm.sgx.com
@@ -2699,7 +2745,7 @@ proxies:
   port: 24413
   udp: true
   password: "d7308582-c10a-4244-a8e6-aa2485511090"
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: 🇬🇧 GB 英国-03 | [A:v2raya_ndxy]
   type: trojan
   server: app.ig.com
@@ -2720,7 +2766,7 @@ proxies:
   port: 443
   udp: true
   password: "d7308582-c10a-4244-a8e6-aa2485511090"
-  client-fingerprint: qq
+  client-fingerprint: chrome
 - name: 🇮🇳 IN 印度-15 | [A:v2raya_ndxy]
   type: trojan
   server: edm.sgx.com
@@ -2734,14 +2780,14 @@ proxies:
   port: 24422
   udp: true
   password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
-  client-fingerprint: safari
+  client-fingerprint: ios
 - name: 🇺🇸 US 美国-47 | [A:v2raya_ndxy]
   type: trojan
   server: v1us9.stablenode.cloud
   port: 24413
   udp: true
   password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
-  client-fingerprint: qq
+  client-fingerprint: safari
 - name: 🇯🇵 JP 日本-25 | [A:yfamilys_subscribe]
   type: ss
   server: 154.36.158.197
@@ -8596,6 +8642,25 @@ rules:
 - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
 - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
 - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+- DST-PORT,22,DIRECT
+- DST-PORT,123,DIRECT
+- DST-PORT,137-139,DIRECT
+- DST-PORT,445,DIRECT
+- DST-PORT,5353,DIRECT
+- DST-PORT,25,DIRECT
+- DST-PORT,465,DIRECT
+- DST-PORT,587,DIRECT
+- DST-PORT,110,DIRECT
+- DST-PORT,995,DIRECT
+- DST-PORT,143,DIRECT
+- DST-PORT,993,DIRECT
+- DST-PORT,3389,DIRECT
+- DST-PORT,5900-5909,DIRECT
+- DST-PORT,3306,DIRECT
+- DST-PORT,5432,DIRECT
+- DST-PORT,6379,DIRECT
+- DST-PORT,27017,DIRECT
+- DST-PORT,1433,DIRECT
 - RULE-SET,geosite-openai,Google & AI
 - RULE-SET,geosite-anthropic,Google & AI
 - RULE-SET,geosite-ai,Google & AI

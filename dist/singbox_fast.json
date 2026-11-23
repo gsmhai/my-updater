@@ -7536,7 +7536,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "safari"
         }
       }
     },
@@ -7550,7 +7550,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -7589,7 +7589,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
       }
     },
@@ -7628,7 +7628,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -7667,7 +7667,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -7692,7 +7692,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "ios"
         }
       }
     },
@@ -7706,7 +7706,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "safari"
         }
       }
     },
@@ -11704,6 +11704,37 @@
       },
       {
         "ip_is_private": true,
+        "outbound": "direct"
+      },
+      {
+        "port": [
+          22,
+          123,
+          137,
+          138,
+          139,
+          445,
+          5353,
+          25,
+          465,
+          587,
+          110,
+          995,
+          143,
+          993,
+          3389,
+          3306,
+          5432,
+          6379,
+          27017,
+          1433
+        ],
+        "outbound": "direct"
+      },
+      {
+        "port_range": [
+          "5900:5909"
+        ],
         "outbound": "direct"
       },
       {
