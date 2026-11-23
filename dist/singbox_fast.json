@@ -7532,7 +7532,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       }
     },
@@ -7546,7 +7546,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -7560,7 +7560,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "ios"
         }
       }
     },
@@ -7585,7 +7585,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -7624,7 +7624,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       }
     },
@@ -7663,7 +7663,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "ios"
         }
       }
     },
@@ -7688,7 +7688,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -7702,7 +7702,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       }
     },
