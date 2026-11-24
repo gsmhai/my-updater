@@ -229,7 +229,7 @@ proxies:
   server: freea.glyphara.com
   port: 30301
   udp: true
-  uuid: afc42d46-4ac4-4b32-8a91-dbe587e3757d
+  uuid: 7be9c8f8-cceb-4c9a-ad5c-5401dfe5e43b
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -242,7 +242,7 @@ proxies:
   server: freea.glyphara.com
   port: 30303
   udp: true
-  uuid: afc42d46-4ac4-4b32-8a91-dbe587e3757d
+  uuid: 7be9c8f8-cceb-4c9a-ad5c-5401dfe5e43b
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -255,7 +255,7 @@ proxies:
   server: freea.glyphara.com
   port: 30401
   udp: true
-  uuid: afc42d46-4ac4-4b32-8a91-dbe587e3757d
+  uuid: 7be9c8f8-cceb-4c9a-ad5c-5401dfe5e43b
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -268,7 +268,7 @@ proxies:
   server: freea.glyphara.com
   port: 30402
   udp: true
-  uuid: afc42d46-4ac4-4b32-8a91-dbe587e3757d
+  uuid: 7be9c8f8-cceb-4c9a-ad5c-5401dfe5e43b
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -281,7 +281,7 @@ proxies:
   server: freea.glyphara.com
   port: 30403
   udp: true
-  uuid: afc42d46-4ac4-4b32-8a91-dbe587e3757d
+  uuid: 7be9c8f8-cceb-4c9a-ad5c-5401dfe5e43b
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -294,7 +294,7 @@ proxies:
   server: freea.glyphara.com
   port: 30701
   udp: true
-  uuid: afc42d46-4ac4-4b32-8a91-dbe587e3757d
+  uuid: 7be9c8f8-cceb-4c9a-ad5c-5401dfe5e43b
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -307,7 +307,7 @@ proxies:
   server: freea.glyphara.com
   port: 30703
   udp: true
-  uuid: afc42d46-4ac4-4b32-8a91-dbe587e3757d
+  uuid: 7be9c8f8-cceb-4c9a-ad5c-5401dfe5e43b
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -320,7 +320,7 @@ proxies:
   server: freea.glyphara.com
   port: 30101
   udp: true
-  uuid: afc42d46-4ac4-4b32-8a91-dbe587e3757d
+  uuid: 7be9c8f8-cceb-4c9a-ad5c-5401dfe5e43b
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -333,7 +333,7 @@ proxies:
   server: freea.glyphara.com
   port: 30102
   udp: true
-  uuid: afc42d46-4ac4-4b32-8a91-dbe587e3757d
+  uuid: 7be9c8f8-cceb-4c9a-ad5c-5401dfe5e43b
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -346,7 +346,7 @@ proxies:
   server: freea.glyphara.com
   port: 30103
   udp: true
-  uuid: afc42d46-4ac4-4b32-8a91-dbe587e3757d
+  uuid: 7be9c8f8-cceb-4c9a-ad5c-5401dfe5e43b
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -359,7 +359,7 @@ proxies:
   server: freea.glyphara.com
   port: 30201
   udp: true
-  uuid: afc42d46-4ac4-4b32-8a91-dbe587e3757d
+  uuid: 7be9c8f8-cceb-4c9a-ad5c-5401dfe5e43b
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -372,7 +372,7 @@ proxies:
   server: freea.glyphara.com
   port: 30202
   udp: true
-  uuid: afc42d46-4ac4-4b32-8a91-dbe587e3757d
+  uuid: 7be9c8f8-cceb-4c9a-ad5c-5401dfe5e43b
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
