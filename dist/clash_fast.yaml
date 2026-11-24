@@ -1009,7 +1009,7 @@ proxies:
   server: v13fr2.stableq.top
   port: 45101
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v13fr2.stableq.top
   obfs: salamander
   obfs-password: "sAShAaLP9v98OCbd"
@@ -1018,7 +1018,7 @@ proxies:
   server: v13fr2.stableq.top
   port: 45201
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v13fr2.stableq.top
   obfs: salamander
   obfs-password: "vrzX7TBJC0EhnrrS"
@@ -1027,7 +1027,7 @@ proxies:
   server: api.sgx.com
   port: 45103
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v5sg6.stableq.top
   obfs: salamander
   obfs-password: "9noYJA0bODeBONED"
@@ -1036,7 +1036,7 @@ proxies:
   server: beta.sgx.com
   port: 45203
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v5sg6.stableq.top
   obfs: salamander
   obfs-password: "v3DkmNCkTvHQOenK"
@@ -1045,7 +1045,7 @@ proxies:
   server: pool.ntp.org
   port: 123
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v5sg6.stableq.top
   obfs: salamander
   obfs-password: "v3DkmNCkTvHQOenK"
@@ -1054,7 +1054,7 @@ proxies:
   server: v1us30.stablenode.top
   port: 45103
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v1us30.stablenode.top
   obfs: salamander
   obfs-password: "RzQcDjBTDgtoVYMn"
@@ -1063,7 +1063,7 @@ proxies:
   server: apple.com
   port: 123
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v2sg3.stableq.top
   obfs: salamander
   obfs-password: "Riy4TZJ3vIgk9H4w"
@@ -1072,7 +1072,7 @@ proxies:
   server: v1us30.stablenode.top
   port: 45204
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v1us30.stablenode.top
   obfs: salamander
   obfs-password: "YJNcm1r7aRL0vF2K"
@@ -1081,7 +1081,7 @@ proxies:
   server: v1us30.stablenode.top
   port: 45304
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v1us30.stablenode.top
   obfs: salamander
   obfs-password: "FS0N29jsaCqOyAsA"
@@ -1090,7 +1090,7 @@ proxies:
   server: v8jp2.stablenode.top
   port: 45103
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v8jp2.stablenode.top
   obfs: salamander
   obfs-password: "0UjyQeICpbvx8o8v"
@@ -1099,7 +1099,7 @@ proxies:
   server: v8jp2.stablenode.top
   port: 45203
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v8jp2.stablenode.top
   obfs: salamander
   obfs-password: "cUGqLRFh8ZNiG3g9"
@@ -1116,7 +1116,7 @@ proxies:
   server: v1in2.stableq.top
   port: 45106
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v1in2.stableq.top
   obfs: salamander
   obfs-password: "axKE7dgswFNAB5cS"
@@ -1135,7 +1135,7 @@ proxies:
   server: v1in2.stableq.top
   port: 45206
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v1in2.stableq.top
   obfs: salamander
   obfs-password: "HT92we72QljeJb9m"
@@ -1150,7 +1150,7 @@ proxies:
   server: www.icbcasia.com
   port: 45103
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v2hk37.stableq.top
   obfs: salamander
   obfs-password: "N4jsyUlCv7jOSeIb"
@@ -1167,7 +1167,7 @@ proxies:
   server: pay.icbcasia.com
   port: 45201
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v2hk37.stableq.top
   obfs: salamander
   obfs-password: "KOfP5lme6aeFpDXC"
@@ -1176,7 +1176,7 @@ proxies:
   server: corpebankasia.icbc.com.cn
   port: 45106
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v4hk36.stableq.top
   obfs: salamander
   obfs-password: "4Tf9DSrpNGUwu7ef"
@@ -1185,7 +1185,7 @@ proxies:
   server: app.ig.com
   port: 45206
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v4hk36.stableq.top
   obfs: salamander
   obfs-password: "qONdAQegtpW7Z5Bz"
@@ -1194,7 +1194,7 @@ proxies:
   server: v4hk36.stableq.top
   port: 45306
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v4hk36.stableq.top
   obfs: salamander
   obfs-password: "RnnogKGDQJXn9ncS"
@@ -1203,7 +1203,7 @@ proxies:
   server: v4hk36.stableq.top
   port: 45406
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v4hk36.stableq.top
   obfs: salamander
   obfs-password: "kZfq0cOFaA527N4u"
@@ -1212,7 +1212,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45106
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "ZmpVHtfy0BIlxQHa"
@@ -1221,7 +1221,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45206
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "kEkCaLaumO0Ovvv3"
@@ -1230,7 +1230,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45306
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "FSkE0FDWbbrQUbPG"
@@ -1239,7 +1239,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45406
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "qtCy5We1l1gMYOzd"
@@ -1248,7 +1248,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45506
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "mLlUWmEOjFFtmReA"
@@ -1257,7 +1257,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45607
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "RSgERnskqy15qMTo"
@@ -1266,7 +1266,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45703
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "Jp47s2DVexsPg1Lt"
@@ -1275,7 +1275,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45802
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "T3n2MIpDvdZn16TQ"
@@ -1284,7 +1284,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45902
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "hvhFznkNqHceM7ct"
@@ -1293,7 +1293,7 @@ proxies:
   server: v1fr4.stablenode.cloud
   port: 45106
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v1fr4.stablenode.cloud
   obfs: salamander
   obfs-password: "7lxfFHnxyPtOOafv"
@@ -1302,7 +1302,7 @@ proxies:
   server: v1fr4.stablenode.cloud
   port: 45206
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v1fr4.stablenode.cloud
   obfs: salamander
   obfs-password: "N2rvCMYcDxnEWHVQ"
@@ -1311,7 +1311,7 @@ proxies:
   server: v13fr2.stableq.top
   port: 45101
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v13fr2.stableq.top
   obfs: salamander
   obfs-password: "sAShAaLP9v98OCbd"
@@ -1320,7 +1320,7 @@ proxies:
   server: v13fr2.stableq.top
   port: 45201
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v13fr2.stableq.top
   obfs: salamander
   obfs-password: "vrzX7TBJC0EhnrrS"
@@ -1329,7 +1329,7 @@ proxies:
   server: api.sgx.com
   port: 45103
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v5sg6.stableq.top
   obfs: salamander
   obfs-password: "9noYJA0bODeBONED"
@@ -1338,7 +1338,7 @@ proxies:
   server: beta.sgx.com
   port: 45203
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v5sg6.stableq.top
   obfs: salamander
   obfs-password: "v3DkmNCkTvHQOenK"
@@ -1347,7 +1347,7 @@ proxies:
   server: pool.ntp.org
   port: 123
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v5sg6.stableq.top
   obfs: salamander
   obfs-password: "v3DkmNCkTvHQOenK"
@@ -1356,7 +1356,7 @@ proxies:
   server: v1us30.stablenode.top
   port: 45103
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v1us30.stablenode.top
   obfs: salamander
   obfs-password: "RzQcDjBTDgtoVYMn"
@@ -1365,7 +1365,7 @@ proxies:
   server: apple.com
   port: 123
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v2sg3.stableq.top
   obfs: salamander
   obfs-password: "Riy4TZJ3vIgk9H4w"
@@ -1374,7 +1374,7 @@ proxies:
   server: v1us30.stablenode.top
   port: 45204
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v1us30.stablenode.top
   obfs: salamander
   obfs-password: "YJNcm1r7aRL0vF2K"
@@ -1383,7 +1383,7 @@ proxies:
   server: v1us30.stablenode.top
   port: 45304
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v1us30.stablenode.top
   obfs: salamander
   obfs-password: "FS0N29jsaCqOyAsA"
@@ -1392,7 +1392,7 @@ proxies:
   server: v8jp2.stablenode.top
   port: 45103
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v8jp2.stablenode.top
   obfs: salamander
   obfs-password: "0UjyQeICpbvx8o8v"
@@ -1401,7 +1401,7 @@ proxies:
   server: v8jp2.stablenode.top
   port: 45203
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v8jp2.stablenode.top
   obfs: salamander
   obfs-password: "cUGqLRFh8ZNiG3g9"
@@ -1410,7 +1410,7 @@ proxies:
   server: v1in2.stableq.top
   port: 45106
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v1in2.stableq.top
   obfs: salamander
   obfs-password: "axKE7dgswFNAB5cS"
@@ -1419,7 +1419,7 @@ proxies:
   server: v1in2.stableq.top
   port: 45206
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v1in2.stableq.top
   obfs: salamander
   obfs-password: "HT92we72QljeJb9m"
@@ -1428,7 +1428,7 @@ proxies:
   server: www.icbcasia.com
   port: 45103
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v2hk37.stableq.top
   obfs: salamander
   obfs-password: "N4jsyUlCv7jOSeIb"
@@ -1437,7 +1437,7 @@ proxies:
   server: pay.icbcasia.com
   port: 45201
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v2hk37.stableq.top
   obfs: salamander
   obfs-password: "KOfP5lme6aeFpDXC"
@@ -1446,7 +1446,7 @@ proxies:
   server: corpebankasia.icbc.com.cn
   port: 45106
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v4hk36.stableq.top
   obfs: salamander
   obfs-password: "4Tf9DSrpNGUwu7ef"
@@ -1455,7 +1455,7 @@ proxies:
   server: app.ig.com
   port: 45206
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v4hk36.stableq.top
   obfs: salamander
   obfs-password: "qONdAQegtpW7Z5Bz"
@@ -1464,7 +1464,7 @@ proxies:
   server: v4hk36.stableq.top
   port: 45306
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v4hk36.stableq.top
   obfs: salamander
   obfs-password: "RnnogKGDQJXn9ncS"
@@ -1473,7 +1473,7 @@ proxies:
   server: v4hk36.stableq.top
   port: 45406
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v4hk36.stableq.top
   obfs: salamander
   obfs-password: "kZfq0cOFaA527N4u"
@@ -1482,7 +1482,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45106
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "ZmpVHtfy0BIlxQHa"
@@ -1491,7 +1491,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45206
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "kEkCaLaumO0Ovvv3"
@@ -1500,7 +1500,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45306
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "FSkE0FDWbbrQUbPG"
@@ -1509,7 +1509,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45406
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "qtCy5We1l1gMYOzd"
@@ -1518,7 +1518,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45506
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "mLlUWmEOjFFtmReA"
@@ -1527,7 +1527,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45607
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "RSgERnskqy15qMTo"
@@ -1536,7 +1536,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45703
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "Jp47s2DVexsPg1Lt"
@@ -1545,7 +1545,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45802
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "T3n2MIpDvdZn16TQ"
@@ -1554,7 +1554,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45902
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "hvhFznkNqHceM7ct"
@@ -1563,7 +1563,7 @@ proxies:
   server: v1fr4.stablenode.cloud
   port: 45106
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v1fr4.stablenode.cloud
   obfs: salamander
   obfs-password: "7lxfFHnxyPtOOafv"
@@ -1572,7 +1572,7 @@ proxies:
   server: v1fr4.stablenode.cloud
   port: 45206
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v1fr4.stablenode.cloud
   obfs: salamander
   obfs-password: "N2rvCMYcDxnEWHVQ"
@@ -1581,7 +1581,7 @@ proxies:
   server: v13fr2.stableq.top
   port: 45101
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v13fr2.stableq.top
   obfs: salamander
   obfs-password: "sAShAaLP9v98OCbd"
@@ -1590,7 +1590,7 @@ proxies:
   server: v13fr2.stableq.top
   port: 45201
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v13fr2.stableq.top
   obfs: salamander
   obfs-password: "vrzX7TBJC0EhnrrS"
@@ -1599,7 +1599,7 @@ proxies:
   server: api.sgx.com
   port: 45103
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v5sg6.stableq.top
   obfs: salamander
   obfs-password: "9noYJA0bODeBONED"
@@ -1608,7 +1608,7 @@ proxies:
   server: beta.sgx.com
   port: 45203
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v5sg6.stableq.top
   obfs: salamander
   obfs-password: "v3DkmNCkTvHQOenK"
@@ -1617,7 +1617,7 @@ proxies:
   server: pool.ntp.org
   port: 123
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v5sg6.stableq.top
   obfs: salamander
   obfs-password: "v3DkmNCkTvHQOenK"
@@ -1626,7 +1626,7 @@ proxies:
   server: v1us30.stablenode.top
   port: 45103
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v1us30.stablenode.top
   obfs: salamander
   obfs-password: "RzQcDjBTDgtoVYMn"
@@ -1635,7 +1635,7 @@ proxies:
   server: apple.com
   port: 123
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v2sg3.stableq.top
   obfs: salamander
   obfs-password: "Riy4TZJ3vIgk9H4w"
@@ -1644,7 +1644,7 @@ proxies:
   server: v1us30.stablenode.top
   port: 45204
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v1us30.stablenode.top
   obfs: salamander
   obfs-password: "YJNcm1r7aRL0vF2K"
@@ -1653,7 +1653,7 @@ proxies:
   server: v1us30.stablenode.top
   port: 45304
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v1us30.stablenode.top
   obfs: salamander
   obfs-password: "FS0N29jsaCqOyAsA"
@@ -1662,7 +1662,7 @@ proxies:
   server: v8jp2.stablenode.top
   port: 45103
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v8jp2.stablenode.top
   obfs: salamander
   obfs-password: "0UjyQeICpbvx8o8v"
@@ -1671,7 +1671,7 @@ proxies:
   server: v8jp2.stablenode.top
   port: 45203
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v8jp2.stablenode.top
   obfs: salamander
   obfs-password: "cUGqLRFh8ZNiG3g9"
@@ -1680,7 +1680,7 @@ proxies:
   server: v1in2.stableq.top
   port: 45106
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v1in2.stableq.top
   obfs: salamander
   obfs-password: "axKE7dgswFNAB5cS"
@@ -1689,7 +1689,7 @@ proxies:
   server: v1in2.stableq.top
   port: 45206
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v1in2.stableq.top
   obfs: salamander
   obfs-password: "HT92we72QljeJb9m"
@@ -1698,7 +1698,7 @@ proxies:
   server: www.icbcasia.com
   port: 45103
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v2hk37.stableq.top
   obfs: salamander
   obfs-password: "N4jsyUlCv7jOSeIb"
@@ -1707,7 +1707,7 @@ proxies:
   server: pay.icbcasia.com
   port: 45201
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v2hk37.stableq.top
   obfs: salamander
   obfs-password: "KOfP5lme6aeFpDXC"
@@ -1716,7 +1716,7 @@ proxies:
   server: corpebankasia.icbc.com.cn
   port: 45106
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v4hk36.stableq.top
   obfs: salamander
   obfs-password: "4Tf9DSrpNGUwu7ef"
@@ -1725,7 +1725,7 @@ proxies:
   server: app.ig.com
   port: 45206
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v4hk36.stableq.top
   obfs: salamander
   obfs-password: "qONdAQegtpW7Z5Bz"
@@ -1734,7 +1734,7 @@ proxies:
   server: v4hk36.stableq.top
   port: 45306
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v4hk36.stableq.top
   obfs: salamander
   obfs-password: "RnnogKGDQJXn9ncS"
@@ -1743,7 +1743,7 @@ proxies:
   server: v4hk36.stableq.top
   port: 45406
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v4hk36.stableq.top
   obfs: salamander
   obfs-password: "kZfq0cOFaA527N4u"
@@ -1752,7 +1752,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45106
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "ZmpVHtfy0BIlxQHa"
@@ -1761,7 +1761,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45206
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "kEkCaLaumO0Ovvv3"
@@ -1770,7 +1770,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45306
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "FSkE0FDWbbrQUbPG"
@@ -1779,7 +1779,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45406
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "qtCy5We1l1gMYOzd"
@@ -1788,7 +1788,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45506
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "mLlUWmEOjFFtmReA"
@@ -1797,7 +1797,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45607
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "RSgERnskqy15qMTo"
@@ -1806,7 +1806,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45703
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "Jp47s2DVexsPg1Lt"
@@ -1815,7 +1815,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45802
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "T3n2MIpDvdZn16TQ"
@@ -1824,7 +1824,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45902
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "hvhFznkNqHceM7ct"
@@ -1833,7 +1833,7 @@ proxies:
   server: v1fr4.stablenode.cloud
   port: 45106
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v1fr4.stablenode.cloud
   obfs: salamander
   obfs-password: "7lxfFHnxyPtOOafv"
@@ -1842,7 +1842,7 @@ proxies:
   server: v1fr4.stablenode.cloud
   port: 45206
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v1fr4.stablenode.cloud
   obfs: salamander
   obfs-password: "N2rvCMYcDxnEWHVQ"
@@ -1851,7 +1851,7 @@ proxies:
   server: v13fr2.stableq.top
   port: 45101
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v13fr2.stableq.top
   obfs: salamander
   obfs-password: "sAShAaLP9v98OCbd"
@@ -1860,7 +1860,7 @@ proxies:
   server: v13fr2.stableq.top
   port: 45201
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v13fr2.stableq.top
   obfs: salamander
   obfs-password: "vrzX7TBJC0EhnrrS"
@@ -1869,7 +1869,7 @@ proxies:
   server: api.sgx.com
   port: 45103
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v5sg6.stableq.top
   obfs: salamander
   obfs-password: "9noYJA0bODeBONED"
@@ -1878,7 +1878,7 @@ proxies:
   server: beta.sgx.com
   port: 45203
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v5sg6.stableq.top
   obfs: salamander
   obfs-password: "v3DkmNCkTvHQOenK"
@@ -1887,7 +1887,7 @@ proxies:
   server: pool.ntp.org
   port: 123
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v5sg6.stableq.top
   obfs: salamander
   obfs-password: "v3DkmNCkTvHQOenK"
@@ -1896,7 +1896,7 @@ proxies:
   server: v1us30.stablenode.top
   port: 45103
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v1us30.stablenode.top
   obfs: salamander
   obfs-password: "RzQcDjBTDgtoVYMn"
@@ -1905,7 +1905,7 @@ proxies:
   server: apple.com
   port: 123
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v2sg3.stableq.top
   obfs: salamander
   obfs-password: "Riy4TZJ3vIgk9H4w"
@@ -1914,7 +1914,7 @@ proxies:
   server: v1us30.stablenode.top
   port: 45204
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v1us30.stablenode.top
   obfs: salamander
   obfs-password: "YJNcm1r7aRL0vF2K"
@@ -1923,7 +1923,7 @@ proxies:
   server: v1us30.stablenode.top
   port: 45304
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v1us30.stablenode.top
   obfs: salamander
   obfs-password: "FS0N29jsaCqOyAsA"
@@ -1932,7 +1932,7 @@ proxies:
   server: v8jp2.stablenode.top
   port: 45103
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v8jp2.stablenode.top
   obfs: salamander
   obfs-password: "0UjyQeICpbvx8o8v"
@@ -1941,7 +1941,7 @@ proxies:
   server: v8jp2.stablenode.top
   port: 45203
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v8jp2.stablenode.top
   obfs: salamander
   obfs-password: "cUGqLRFh8ZNiG3g9"
@@ -1950,7 +1950,7 @@ proxies:
   server: v1in2.stableq.top
   port: 45106
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v1in2.stableq.top
   obfs: salamander
   obfs-password: "axKE7dgswFNAB5cS"
@@ -1959,7 +1959,7 @@ proxies:
   server: v1in2.stableq.top
   port: 45206
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v1in2.stableq.top
   obfs: salamander
   obfs-password: "HT92we72QljeJb9m"
@@ -1968,7 +1968,7 @@ proxies:
   server: www.icbcasia.com
   port: 45103
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v2hk37.stableq.top
   obfs: salamander
   obfs-password: "N4jsyUlCv7jOSeIb"
@@ -1977,7 +1977,7 @@ proxies:
   server: pay.icbcasia.com
   port: 45201
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v2hk37.stableq.top
   obfs: salamander
   obfs-password: "KOfP5lme6aeFpDXC"
@@ -1986,7 +1986,7 @@ proxies:
   server: corpebankasia.icbc.com.cn
   port: 45106
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v4hk36.stableq.top
   obfs: salamander
   obfs-password: "4Tf9DSrpNGUwu7ef"
@@ -1995,7 +1995,7 @@ proxies:
   server: app.ig.com
   port: 45206
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v4hk36.stableq.top
   obfs: salamander
   obfs-password: "qONdAQegtpW7Z5Bz"
@@ -2004,7 +2004,7 @@ proxies:
   server: v4hk36.stableq.top
   port: 45306
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v4hk36.stableq.top
   obfs: salamander
   obfs-password: "RnnogKGDQJXn9ncS"
@@ -2013,7 +2013,7 @@ proxies:
   server: v4hk36.stableq.top
   port: 45406
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v4hk36.stableq.top
   obfs: salamander
   obfs-password: "kZfq0cOFaA527N4u"
@@ -2022,7 +2022,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45106
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "ZmpVHtfy0BIlxQHa"
@@ -2031,7 +2031,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45206
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "kEkCaLaumO0Ovvv3"
@@ -2040,7 +2040,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45306
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "FSkE0FDWbbrQUbPG"
@@ -2049,7 +2049,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45406
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "qtCy5We1l1gMYOzd"
@@ -2058,7 +2058,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45506
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "mLlUWmEOjFFtmReA"
@@ -2067,7 +2067,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45607
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "RSgERnskqy15qMTo"
@@ -2076,7 +2076,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45703
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "Jp47s2DVexsPg1Lt"
@@ -2085,7 +2085,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45802
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "T3n2MIpDvdZn16TQ"
@@ -2094,7 +2094,7 @@ proxies:
   server: v10hk30.stableq.top
   port: 45902
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v10hk30.stableq.top
   obfs: salamander
   obfs-password: "hvhFznkNqHceM7ct"
@@ -2103,7 +2103,7 @@ proxies:
   server: v1fr4.stablenode.cloud
   port: 45106
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v1fr4.stablenode.cloud
   obfs: salamander
   obfs-password: "7lxfFHnxyPtOOafv"
@@ -2112,7 +2112,7 @@ proxies:
   server: v1fr4.stablenode.cloud
   port: 45206
   udp: true
-  password: "56c7fd50-ae7d-4db9-89f1-a51650a656c2"
+  password: "b24bae93-97b9-4206-8b1c-0d66ba42376f"
   sni: v1fr4.stablenode.cloud
   obfs: salamander
   obfs-password: "N2rvCMYcDxnEWHVQ"
@@ -2688,106 +2688,106 @@ proxies:
   server: edm.sgx.com
   port: 443
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v1in2.stableq.top
 - name: 🇺🇸 US 美国-42 | [A:v2raya_ndxy]
   type: trojan
   server: v1us9.stablenode.cloud
   port: 24422
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
-  client-fingerprint: qq
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
+  client-fingerprint: safari
 - name: 🇺🇸 US 美国-43 | [A:v2raya_ndxy]
   type: trojan
   server: v1us9.stablenode.cloud
   port: 24413
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
-  client-fingerprint: edge
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
+  client-fingerprint: ios
 - name: 🇬🇧 GB 英国-01 | [A:v2raya_ndxy]
   type: trojan
   server: app.ig.com
   port: 24443
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   client-fingerprint: chrome
 - name: 🇬🇧 GB 英国-02 | [A:v2raya_ndxy]
   type: trojan
   server: api.ig.com
   port: 24444
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
   sni: v2uk1.stablenode.top
 - name: 🇩🇪 DE 德国-01 | [A:v2raya_ndxy]
   type: trojan
   server: pay.icbcasia.com
   port: 443
   udp: true
-  password: "94e30165-0054-4b9d-9122-9db723cf58c1"
-  client-fingerprint: chrome
+  password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
+  client-fingerprint: edge
 - name: 🇮🇳 IN 印度-14 | [A:v2raya_ndxy]
   type: trojan
   server: edm.sgx.com
   port: 443
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v1in2.stableq.top
 - name: 🇺🇸 US 美国-44 | [A:v2raya_ndxy]
   type: trojan
   server: v1us9.stablenode.cloud
   port: 24422
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
-  client-fingerprint: edge
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
+  client-fingerprint: qq
 - name: 🇺🇸 US 美国-45 | [A:v2raya_ndxy]
   type: trojan
   server: v1us9.stablenode.cloud
   port: 24413
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
-  client-fingerprint: ios
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
+  client-fingerprint: edge
 - name: 🇬🇧 GB 英国-03 | [A:v2raya_ndxy]
   type: trojan
   server: app.ig.com
   port: 24443
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
-  client-fingerprint: safari
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
+  client-fingerprint: edge
 - name: 🇬🇧 GB 英国-04 | [A:v2raya_ndxy]
   type: trojan
   server: api.ig.com
   port: 24444
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
   sni: v2uk1.stablenode.top
 - name: 🇩🇪 DE 德国-02 | [A:v2raya_ndxy]
   type: trojan
   server: pay.icbcasia.com
   port: 443
   udp: true
-  password: "d7308582-c10a-4244-a8e6-aa2485511090"
-  client-fingerprint: chrome
+  password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
+  client-fingerprint: qq
 - name: 🇮🇳 IN 印度-15 | [A:v2raya_ndxy]
   type: trojan
   server: edm.sgx.com
   port: 443
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
   sni: v1in2.stableq.top
 - name: 🇺🇸 US 美国-46 | [A:v2raya_ndxy]
   type: trojan
   server: v1us9.stablenode.cloud
   port: 24422
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
-  client-fingerprint: ios
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
+  client-fingerprint: edge
 - name: 🇺🇸 US 美国-47 | [A:v2raya_ndxy]
   type: trojan
   server: v1us9.stablenode.cloud
   port: 24413
   udp: true
-  password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
-  client-fingerprint: firefox
+  password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
+  client-fingerprint: edge
 - name: 🇯🇵 JP 日本-25 | [A:yfamilys_subscribe]
   type: ss
   server: 154.36.158.197
