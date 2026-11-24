@@ -2696,21 +2696,21 @@ proxies:
   port: 24422
   udp: true
   password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: 🇺🇸 US 美国-43 | [A:v2raya_ndxy]
   type: trojan
   server: v1us9.stablenode.cloud
   port: 24413
   udp: true
   password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
-  client-fingerprint: firefox
+  client-fingerprint: edge
 - name: 🇬🇧 GB 英国-01 | [A:v2raya_ndxy]
   type: trojan
   server: app.ig.com
   port: 24443
   udp: true
   password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇬🇧 GB 英国-02 | [A:v2raya_ndxy]
   type: trojan
   server: api.ig.com
@@ -2724,7 +2724,7 @@ proxies:
   port: 443
   udp: true
   password: "6d6b7dc8-385b-4eef-beaa-afa678e259e3"
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: 🇮🇳 IN 印度-14 | [A:v2raya_ndxy]
   type: trojan
   server: edm.sgx.com
@@ -2738,21 +2738,21 @@ proxies:
   port: 24422
   udp: true
   password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
-  client-fingerprint: qq
+  client-fingerprint: firefox
 - name: 🇺🇸 US 美国-45 | [A:v2raya_ndxy]
   type: trojan
   server: v1us9.stablenode.cloud
   port: 24413
   udp: true
   password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
-  client-fingerprint: qq
+  client-fingerprint: edge
 - name: 🇬🇧 GB 英国-03 | [A:v2raya_ndxy]
   type: trojan
   server: app.ig.com
   port: 24443
   udp: true
   password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
-  client-fingerprint: firefox
+  client-fingerprint: edge
 - name: 🇬🇧 GB 英国-04 | [A:v2raya_ndxy]
   type: trojan
   server: api.ig.com
@@ -2766,7 +2766,7 @@ proxies:
   port: 443
   udp: true
   password: "c2ebbc7e-7bf0-4254-a6de-15471093288b"
-  client-fingerprint: chrome
+  client-fingerprint: safari
 - name: 🇮🇳 IN 印度-15 | [A:v2raya_ndxy]
   type: trojan
   server: edm.sgx.com
@@ -2780,7 +2780,7 @@ proxies:
   port: 24422
   udp: true
   password: "55e70f3d-1ff4-4513-ac26-759fe11c6e3b"
-  client-fingerprint: safari
+  client-fingerprint: ios
 - name: 🇺🇸 US 美国-47 | [A:v2raya_ndxy]
   type: trojan
   server: v1us9.stablenode.cloud
