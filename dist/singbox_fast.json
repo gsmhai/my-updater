@@ -3307,7 +3307,7 @@
       "tag": "🇯🇵 JP 日本-04 | [A:toshare5]",
       "server": "freea.glyphara.com",
       "server_port": 30301,
-      "uuid": "da371215-0450-4f6e-b598-f4caa6310921",
+      "uuid": "ee1df4bc-06cc-4686-98ee-075236f65017",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -3433,7 +3433,7 @@
       "tag": "🇯🇵 JP 日本-09 | [A:toshare5]",
       "server": "freea.glyphara.com",
       "server_port": 30303,
-      "uuid": "da371215-0450-4f6e-b598-f4caa6310921",
+      "uuid": "ee1df4bc-06cc-4686-98ee-075236f65017",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -3559,7 +3559,7 @@
       "tag": "🇸🇬 SG 新加坡-04 | [A:toshare5]",
       "server": "freea.glyphara.com",
       "server_port": 30401,
-      "uuid": "da371215-0450-4f6e-b598-f4caa6310921",
+      "uuid": "ee1df4bc-06cc-4686-98ee-075236f65017",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -3685,7 +3685,7 @@
       "tag": "🇸🇬 SG 新加坡-09 | [A:toshare5]",
       "server": "freea.glyphara.com",
       "server_port": 30402,
-      "uuid": "da371215-0450-4f6e-b598-f4caa6310921",
+      "uuid": "ee1df4bc-06cc-4686-98ee-075236f65017",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -3810,7 +3810,7 @@
       "tag": "🇸🇬 SG 新加坡-14 | [A:toshare5]",
       "server": "freea.glyphara.com",
       "server_port": 30403,
-      "uuid": "da371215-0450-4f6e-b598-f4caa6310921",
+      "uuid": "ee1df4bc-06cc-4686-98ee-075236f65017",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -3936,7 +3936,7 @@
       "tag": "🇺🇸 US 美国-07 | [A:toshare5]",
       "server": "freea.glyphara.com",
       "server_port": 30701,
-      "uuid": "da371215-0450-4f6e-b598-f4caa6310921",
+      "uuid": "ee1df4bc-06cc-4686-98ee-075236f65017",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -4062,7 +4062,7 @@
       "tag": "🇺🇸 US 美国-13 | [A:toshare5]",
       "server": "freea.glyphara.com",
       "server_port": 30703,
-      "uuid": "da371215-0450-4f6e-b598-f4caa6310921",
+      "uuid": "ee1df4bc-06cc-4686-98ee-075236f65017",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -4188,7 +4188,7 @@
       "tag": "🇭🇰 HK 香港-05 | [A:toshare5]",
       "server": "freea.glyphara.com",
       "server_port": 30101,
-      "uuid": "da371215-0450-4f6e-b598-f4caa6310921",
+      "uuid": "ee1df4bc-06cc-4686-98ee-075236f65017",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -4314,7 +4314,7 @@
       "tag": "🇭🇰 HK 香港-10 | [A:toshare5]",
       "server": "freea.glyphara.com",
       "server_port": 30102,
-      "uuid": "da371215-0450-4f6e-b598-f4caa6310921",
+      "uuid": "ee1df4bc-06cc-4686-98ee-075236f65017",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -4439,7 +4439,7 @@
       "tag": "🇭🇰 HK 香港-15 | [A:toshare5]",
       "server": "freea.glyphara.com",
       "server_port": 30103,
-      "uuid": "da371215-0450-4f6e-b598-f4caa6310921",
+      "uuid": "ee1df4bc-06cc-4686-98ee-075236f65017",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -4565,7 +4565,7 @@
       "tag": "🇹🇼 TW 台湾-04 | [A:toshare5]",
       "server": "freea.glyphara.com",
       "server_port": 30201,
-      "uuid": "da371215-0450-4f6e-b598-f4caa6310921",
+      "uuid": "ee1df4bc-06cc-4686-98ee-075236f65017",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -4691,7 +4691,7 @@
       "tag": "🇹🇼 TW 台湾-09 | [A:toshare5]",
       "server": "freea.glyphara.com",
       "server_port": 30202,
-      "uuid": "da371215-0450-4f6e-b598-f4caa6310921",
+      "uuid": "ee1df4bc-06cc-4686-98ee-075236f65017",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -7542,7 +7542,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "safari"
         }
       }
     },
@@ -7595,7 +7595,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         }
       }
     },
@@ -7620,7 +7620,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -7634,7 +7634,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "ios"
         }
       }
     },
@@ -7648,7 +7648,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "qq"
         }
       }
     },
@@ -7673,7 +7673,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -7698,7 +7698,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -7712,7 +7712,7 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         }
       }
     },
