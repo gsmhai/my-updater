@@ -114,7 +114,7 @@ proxies:
   server: freea.glyphara.com
   port: 30301
   udp: true
-  uuid: 9307ae81-60fa-4aa0-af51-2ad1fe11a246
+  uuid: 88ecc5c8-1e02-4ea1-8e2d-769b90ca2058
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -192,7 +192,7 @@ proxies:
   server: freea.glyphara.com
   port: 30303
   udp: true
-  uuid: 9307ae81-60fa-4aa0-af51-2ad1fe11a246
+  uuid: 88ecc5c8-1e02-4ea1-8e2d-769b90ca2058
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -270,7 +270,7 @@ proxies:
   server: freea.glyphara.com
   port: 30401
   udp: true
-  uuid: 9307ae81-60fa-4aa0-af51-2ad1fe11a246
+  uuid: 88ecc5c8-1e02-4ea1-8e2d-769b90ca2058
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -348,7 +348,7 @@ proxies:
   server: freea.glyphara.com
   port: 30402
   udp: true
-  uuid: 9307ae81-60fa-4aa0-af51-2ad1fe11a246
+  uuid: 88ecc5c8-1e02-4ea1-8e2d-769b90ca2058
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -425,7 +425,7 @@ proxies:
   server: freea.glyphara.com
   port: 30403
   udp: true
-  uuid: 9307ae81-60fa-4aa0-af51-2ad1fe11a246
+  uuid: 88ecc5c8-1e02-4ea1-8e2d-769b90ca2058
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -503,7 +503,7 @@ proxies:
   server: freea.glyphara.com
   port: 30701
   udp: true
-  uuid: 9307ae81-60fa-4aa0-af51-2ad1fe11a246
+  uuid: 88ecc5c8-1e02-4ea1-8e2d-769b90ca2058
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -581,7 +581,7 @@ proxies:
   server: freea.glyphara.com
   port: 30703
   udp: true
-  uuid: 9307ae81-60fa-4aa0-af51-2ad1fe11a246
+  uuid: 88ecc5c8-1e02-4ea1-8e2d-769b90ca2058
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -659,7 +659,7 @@ proxies:
   server: freea.glyphara.com
   port: 30101
   udp: true
-  uuid: 9307ae81-60fa-4aa0-af51-2ad1fe11a246
+  uuid: 88ecc5c8-1e02-4ea1-8e2d-769b90ca2058
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -737,7 +737,7 @@ proxies:
   server: freea.glyphara.com
   port: 30102
   udp: true
-  uuid: 9307ae81-60fa-4aa0-af51-2ad1fe11a246
+  uuid: 88ecc5c8-1e02-4ea1-8e2d-769b90ca2058
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -814,7 +814,7 @@ proxies:
   server: freea.glyphara.com
   port: 30103
   udp: true
-  uuid: 9307ae81-60fa-4aa0-af51-2ad1fe11a246
+  uuid: 88ecc5c8-1e02-4ea1-8e2d-769b90ca2058
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -892,7 +892,7 @@ proxies:
   server: freea.glyphara.com
   port: 30201
   udp: true
-  uuid: 9307ae81-60fa-4aa0-af51-2ad1fe11a246
+  uuid: 88ecc5c8-1e02-4ea1-8e2d-769b90ca2058
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -970,7 +970,7 @@ proxies:
   server: freea.glyphara.com
   port: 30202
   udp: true
-  uuid: 9307ae81-60fa-4aa0-af51-2ad1fe11a246
+  uuid: 88ecc5c8-1e02-4ea1-8e2d-769b90ca2058
   flow: xtls-rprx-vision
   tls: true
   servername: itunes.apple.com
@@ -2696,21 +2696,21 @@ proxies:
   port: 24422
   udp: true
   password: "94e30165-0054-4b9d-9122-9db723cf58c1"
-  client-fingerprint: safari
+  client-fingerprint: qq
 - name: 🇺🇸 US 美国-43 | [A:v2raya_ndxy]
   type: trojan
   server: v1us9.stablenode.cloud
   port: 24413
   udp: true
   password: "94e30165-0054-4b9d-9122-9db723cf58c1"
-  client-fingerprint: chrome
+  client-fingerprint: edge
 - name: 🇬🇧 GB 英国-01 | [A:v2raya_ndxy]
   type: trojan
   server: app.ig.com
   port: 24443
   udp: true
   password: "94e30165-0054-4b9d-9122-9db723cf58c1"
-  client-fingerprint: edge
+  client-fingerprint: qq
 - name: 🇬🇧 GB 英国-02 | [A:v2raya_ndxy]
   type: trojan
   server: api.ig.com
@@ -2724,7 +2724,7 @@ proxies:
   port: 443
   udp: true
   password: "94e30165-0054-4b9d-9122-9db723cf58c1"
-  client-fingerprint: chrome
+  client-fingerprint: edge
 - name: 🇮🇳 IN 印度-14 | [A:v2raya_ndxy]
   type: trojan
   server: edm.sgx.com
@@ -2738,21 +2738,21 @@ proxies:
   port: 24422
   udp: true
   password: "d7308582-c10a-4244-a8e6-aa2485511090"
-  client-fingerprint: qq
+  client-fingerprint: chrome
 - name: 🇺🇸 US 美国-45 | [A:v2raya_ndxy]
   type: trojan
   server: v1us9.stablenode.cloud
   port: 24413
   udp: true
   password: "d7308582-c10a-4244-a8e6-aa2485511090"
-  client-fingerprint: edge
+  client-fingerprint: firefox
 - name: 🇬🇧 GB 英国-03 | [A:v2raya_ndxy]
   type: trojan
   server: app.ig.com
   port: 24443
   udp: true
   password: "d7308582-c10a-4244-a8e6-aa2485511090"
-  client-fingerprint: firefox
+  client-fingerprint: chrome
 - name: 🇬🇧 GB 英国-04 | [A:v2raya_ndxy]
   type: trojan
   server: api.ig.com
@@ -2766,7 +2766,7 @@ proxies:
   port: 443
   udp: true
   password: "d7308582-c10a-4244-a8e6-aa2485511090"
-  client-fingerprint: edge
+  client-fingerprint: chrome
 - name: 🇮🇳 IN 印度-15 | [A:v2raya_ndxy]
   type: trojan
   server: edm.sgx.com
@@ -2780,14 +2780,14 @@ proxies:
   port: 24422
   udp: true
   password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
-  client-fingerprint: firefox
+  client-fingerprint: safari
 - name: 🇺🇸 US 美国-47 | [A:v2raya_ndxy]
   type: trojan
   server: v1us9.stablenode.cloud
   port: 24413
   udp: true
   password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
-  client-fingerprint: qq
+  client-fingerprint: edge
 - name: 🇯🇵 JP 日本-25 | [A:yfamilys_subscribe]
   type: ss
   server: 154.36.158.197
