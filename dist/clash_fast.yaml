@@ -2696,21 +2696,21 @@ proxies:
   port: 24422
   udp: true
   password: "94e30165-0054-4b9d-9122-9db723cf58c1"
-  client-fingerprint: qq
+  client-fingerprint: ios
 - name: 🇺🇸 US 美国-43 | [A:v2raya_ndxy]
   type: trojan
   server: v1us9.stablenode.cloud
   port: 24413
   udp: true
   password: "94e30165-0054-4b9d-9122-9db723cf58c1"
-  client-fingerprint: edge
+  client-fingerprint: firefox
 - name: 🇬🇧 GB 英国-01 | [A:v2raya_ndxy]
   type: trojan
   server: app.ig.com
   port: 24443
   udp: true
   password: "94e30165-0054-4b9d-9122-9db723cf58c1"
-  client-fingerprint: safari
+  client-fingerprint: chrome
 - name: 🇬🇧 GB 英国-02 | [A:v2raya_ndxy]
   type: trojan
   server: api.ig.com
@@ -2724,7 +2724,7 @@ proxies:
   port: 443
   udp: true
   password: "94e30165-0054-4b9d-9122-9db723cf58c1"
-  client-fingerprint: ios
+  client-fingerprint: qq
 - name: 🇮🇳 IN 印度-14 | [A:v2raya_ndxy]
   type: trojan
   server: edm.sgx.com
@@ -2738,7 +2738,7 @@ proxies:
   port: 24422
   udp: true
   password: "d7308582-c10a-4244-a8e6-aa2485511090"
-  client-fingerprint: chrome
+  client-fingerprint: edge
 - name: 🇺🇸 US 美国-45 | [A:v2raya_ndxy]
   type: trojan
   server: v1us9.stablenode.cloud
@@ -2752,7 +2752,7 @@ proxies:
   port: 24443
   udp: true
   password: "d7308582-c10a-4244-a8e6-aa2485511090"
-  client-fingerprint: qq
+  client-fingerprint: chrome
 - name: 🇬🇧 GB 英国-04 | [A:v2raya_ndxy]
   type: trojan
   server: api.ig.com
@@ -2766,7 +2766,7 @@ proxies:
   port: 443
   udp: true
   password: "d7308582-c10a-4244-a8e6-aa2485511090"
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: 🇮🇳 IN 印度-15 | [A:v2raya_ndxy]
   type: trojan
   server: edm.sgx.com
@@ -2787,7 +2787,7 @@ proxies:
   port: 24413
   udp: true
   password: "dbda2214-1bbf-43e8-98df-f02dd4670e3e"
-  client-fingerprint: firefox
+  client-fingerprint: edge
 - name: 🇯🇵 JP 日本-25 | [A:yfamilys_subscribe]
   type: ss
   server: 154.36.158.197
